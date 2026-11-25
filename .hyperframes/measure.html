@@ -1,0 +1,181 @@
+<!doctype html><html><head><meta charset="utf-8"><base href="file:///home/user/linktree_motion_video/">
+<link rel="stylesheet" href="assets/css/common.css"><style>html,body{margin:0;width:1080px;height:1920px;overflow:hidden}</style></head>
+<body><div style="position:relative;width:1080px;height:1920px">
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; }
+    #s4-ground { position: absolute; inset: 0;
+      background: radial-gradient(900px 800px at 50% 55%, #dff5ee 0%, rgba(223,245,238,0) 70%),
+        linear-gradient(rgba(15,118,110,0.06) 1px, transparent 1px) 0 0 / 60px 60px,
+        linear-gradient(90deg, rgba(15,118,110,0.06) 1px, transparent 1px) 0 0 / 60px 60px, #f6faf9; }
+    #s4-cam { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+    #s4-phone { left: 280px; top: 560px; }
+    .s4-head { position: absolute; left: 60px; right: 60px; top: 300px; }
+    .s4-head .w { display: inline-block; }
+
+    /* highlight states on the real page elements */
+    #s4-wa { position: relative; }
+    #s4-wa-fill { position: absolute; inset: -1px; border-radius: 50%; background: #25d366; opacity: 0; }
+    #s4-wa .ico { position: relative; }
+    .s4-tap { position: absolute; left: 50%; top: 50%; width: 60px; height: 60px; margin: -30px 0 0 -30px; border-radius: 50%;
+      border: 4px solid rgba(255,255,255,0.9); opacity: 0; pointer-events: none; }
+    .s4-tap.dark { border-color: rgba(69,10,10,0.45); }
+    .s4-soc-fill { position: absolute; inset: -1px; border-radius: 50%; opacity: 0; }
+    .lp .soc { position: relative; }
+
+    /* overlays inside the phone screen */
+    .s4-ov { position: absolute; left: 0; right: 0; z-index: 10; font-family: var(--font); direction: rtl; }
+    #s4-chat { bottom: 0; height: 640px; border-radius: 34px 34px 0 0; background: #efeae2; overflow: hidden; box-shadow: 0 -20px 40px rgba(0,0,0,0.18); }
+    #s4-chat .hd { height: 96px; background: #075e54; color: #fff; display: flex; align-items: center; gap: 14px; padding: 0 22px; }
+    #s4-chat .hd img { width: 58px; height: 58px; border-radius: 50%; border: 2px solid #fff; }
+    #s4-chat .hd .n { font-size: 24px; font-weight: 700; direction: ltr; }
+    #s4-chat .hd .m { font-size: 16px; opacity: 0.85; }
+    #s4-chat .hd .ico { margin-right: auto; font-size: 34px; color: #25d366; }
+    .s4-msg { position: absolute; max-width: 360px; padding: 14px 20px; border-radius: 20px; font-size: 26px; font-weight: 500; line-height: 1.4; color: #111b21; box-shadow: 0 2px 2px rgba(0,0,0,0.08); }
+    #s4-m1 { top: 130px; left: 22px; background: #d9fdd3; border-top-left-radius: 6px; }
+    #s4-m2 { top: 250px; right: 22px; background: #fff; border-top-right-radius: 6px; }
+    #s4-chat .in { position: absolute; left: 16px; right: 16px; bottom: 22px; height: 70px; border-radius: 35px; background: #fff; display: flex; align-items: center; padding: 0 24px; color: #8696a0; font-size: 22px; }
+    #s4-chat .send { position: absolute; left: 22px; bottom: 26px; width: 62px; height: 62px; border-radius: 50%; background: #00a884; color: #fff; display: grid; place-items: center; font-size: 26px; }
+
+    #s4-call { top: 0; bottom: 0; background: linear-gradient(170deg, #7f1d1d, #450a0a 60%, #1c0606); color: #fff; text-align: center; }
+    #s4-call .av { position: absolute; left: 50%; top: 250px; width: 170px; height: 170px; margin-left: -85px; border-radius: 50%; border: 5px solid #fff; overflow: hidden; }
+    #s4-call .av img { width: 100%; height: 100%; }
+    .s4-ring { position: absolute; left: 50%; top: 335px; width: 170px; height: 170px; margin: -85px 0 0 -85px; border-radius: 50%; border: 4px solid rgba(255,255,255,0.7); opacity: 0; }
+    #s4-call .n { position: absolute; left: 0; right: 0; top: 460px; font-size: 40px; font-weight: 700; direction: ltr; }
+    #s4-call .st { position: absolute; left: 0; right: 0; top: 520px; font-size: 26px; opacity: 0.85; }
+    #s4-call .num { position: absolute; left: 0; right: 0; top: 570px; font-size: 30px; font-weight: 500; direction: ltr; letter-spacing: 0.04em; }
+    #s4-call .end { position: absolute; left: 50%; bottom: 120px; width: 110px; height: 110px; margin-left: -55px; border-radius: 50%; background: #ef4444; display: grid; place-items: center; font-size: 46px; }
+    #s4-call .end .ico { transform: rotate(135deg); }
+
+    #s4-card { top: 210px; left: 34px; right: 34px; border-radius: 30px; background: #fff; padding: 28px 24px; text-align: center;
+      box-shadow: 0 40px 80px rgba(0,0,0,0.35), 0 0 0 1px #fecaca; }
+    #s4-card .tt { font-size: 20px; color: #991b1b; font-weight: 700; margin-bottom: 18px; display: flex; align-items: center; justify-content: center; gap: 8px; }
+    #s4-card img { width: 120px; height: 120px; border-radius: 50%; border: 4px solid #fee2e2; }
+    #s4-card .n { margin-top: 12px; font-size: 34px; font-weight: 700; color: #450a0a; direction: ltr; }
+    #s4-card .f { margin-top: 14px; display: flex; align-items: center; gap: 12px; padding: 14px 18px; border-radius: 16px; background: #fdf2f2; font-size: 24px; color: #450a0a; }
+    #s4-card .f .ico { color: #dc2626; font-size: 22px; }
+    #s4-card .f span.v { direction: ltr; font-weight: 700; }
+    #s4-toast { position: absolute; z-index: 12; left: 40px; right: 40px; bottom: 90px; height: 84px; border-radius: 42px; background: #0b1f1c; color: #fff;
+      display: flex; align-items: center; justify-content: center; gap: 14px; font-family: var(--font); font-size: 26px; font-weight: 700; direction: rtl; opacity: 0; }
+    #s4-toast .ico { color: #34d399; font-size: 30px; }
+
+    #s4-map { top: 0; bottom: 0; background: #e9efe9; overflow: hidden; }
+    #s4-map svg.streets { position: absolute; inset: 0; }
+    #s4-route { fill: none; stroke: #1a73e8; stroke-width: 12; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1400; stroke-dashoffset: 1400; }
+    #s4-route-shadow { fill: none; stroke: #0d47a1; stroke-width: 18; stroke-linecap: round; stroke-linejoin: round; opacity: 0.25; stroke-dasharray: 1400; stroke-dashoffset: 1400; }
+    #s4-me { position: absolute; left: 92px; top: 822px; width: 36px; height: 36px; border-radius: 50%; background: #1a73e8; border: 6px solid #fff; box-shadow: 0 0 0 14px rgba(26,115,232,0.2); }
+    #s4-pin { position: absolute; left: 318px; top: 228px; width: 70px; height: 90px; color: #dc2626; font-size: 90px; line-height: 1; }
+    #s4-pin .ico { width: 70px; height: 90px; filter: drop-shadow(0 10px 8px rgba(0,0,0,0.3)); }
+    #s4-pinlabel { position: absolute; left: 190px; top: 160px; padding: 6px 16px; border-radius: 12px; background: #fff; font-size: 20px; font-weight: 700; color: #450a0a; direction: ltr; box-shadow: 0 6px 14px rgba(0,0,0,0.15); }
+    #s4-eta { position: absolute; left: 18px; right: 18px; bottom: 26px; padding: 20px 24px; border-radius: 26px; background: #fff; box-shadow: 0 -10px 30px rgba(0,0,0,0.15); display: flex; align-items: center; gap: 16px; }
+    #s4-eta .go { width: 76px; height: 76px; border-radius: 50%; background: #1a73e8; color: #fff; display: grid; place-items: center; font-size: 34px; flex: none; }
+    #s4-eta .t { font-size: 30px; font-weight: 700; color: #188038; }
+    #s4-eta .a { font-size: 19px; color: #5f6368; }
+
+    /* label pill above the phone (one per feature) */
+    .s4-label { position: absolute; left: 0; right: 0; top: 200px; text-align: center; }
+    .s4-label .p { display: inline-flex; align-items: center; gap: 20px; padding: 20px 46px; border-radius: 999px; background: var(--teal-ink); color: #fff;
+      font-family: var(--font); font-weight: 700; font-size: 62px; direction: rtl; box-shadow: 0 20px 50px rgba(11,31,28,0.35); }
+    .s4-label .p .ico { font-size: 54px; }
+  </style>
+
+  <div id="root" data-composition-id="s4" data-width="1080" data-height="1920">
+    <div id="s4-ground"></div>
+
+    <h1 id="s4-h" class="s4-head headline clip" data-start="0.4" data-duration="2.9" data-track-index="2">
+      <span class="w">كل</span> <span class="w">شي</span> <span class="w accent">قدامه</span>
+    </h1>
+
+    <div id="s4-cam">
+      <div id="s4-phone" class="phone">
+        <div class="island"></div>
+        <div class="screen">
+          <div class="page-zoom">
+            <div id="s4-page" class="lp t-chikenhut">
+              <div class="stripes"></div>
+              <div id="s4-cover" class="cover fade" style="background-image:url('assets/clients/chikenhut-cover.png')"></div>
+              <div id="s4-avatar" class="avatar" style="background-image:url('assets/clients/chikenhut-logo.jpg')"></div>
+              <div id="s4-name" class="name ltrname">Chiken Hut</div>
+              <div><span id="s4-tag" class="tagline"><i class="ico i-tag"></i>مطعم وجبات سريعة</span></div>
+              <div id="s4-btns" class="btns">
+                <div id="s4-call-btn" class="btn primary"><div class="t"><i class="ico i-phone"></i>اتصال</div><div class="s ltr">0993354919</div><div id="s4-tap-call" class="s4-tap"></div></div>
+                <div id="s4-save-btn" class="btn"><div class="t"><i class="ico i-user-plus"></i>حفظ</div><div class="s">جهة الاتصال</div><div id="s4-tap-save" class="s4-tap dark"></div></div>
+              </div>
+              <div id="s4-socials" class="socials">
+                <div id="s4-ig" class="soc"><div id="s4-ig-fill" class="s4-soc-fill" style="background:linear-gradient(45deg,#f9a825,#e1306c 55%,#8e44ad)"></div><i class="ico i-instagram" style="position:relative"></i></div>
+                <div id="s4-fb" class="soc"><div id="s4-fb-fill" class="s4-soc-fill" style="background:#1877f2"></div><i class="ico i-facebook-f" style="position:relative"></i></div>
+                <div id="s4-wa" class="soc"><div id="s4-wa-fill"></div><i class="ico i-whatsapp"></i><div id="s4-tap-wa" class="s4-tap"></div></div>
+              </div>
+              <div id="s4-addr" class="card">
+                <div class="addr">
+                  <div class="pin"><i class="ico i-location-dot"></i></div>
+                  <div><div class="k">العنوان</div><div class="v">حلب-الجميلية-جانب جامع الصديق</div></div>
+                </div>
+                <div id="s4-map-btn" class="mapbtn" style="position:relative"><i class="ico i-open"></i>فتح في الخرائط<div id="s4-tap-map" class="s4-tap dark"></div></div>
+              </div>
+              <div class="footer">صُنع باستخدام: <b class="ltr">Linktrees.link</b></div>
+            </div>
+          </div>
+
+          <!-- WhatsApp chat opens -->
+          <div id="s4-chat" class="s4-ov">
+            <div class="hd"><img src="assets/clients/chikenhut-logo.jpg" alt="" /><div><div class="n">Chiken Hut</div><div class="m">متصل الآن</div></div><i class="ico i-whatsapp"></i></div>
+            <div id="s4-m1" class="s4-msg">مرحبا، بدي اطلب وجبة</div>
+            <div id="s4-m2" class="s4-msg">أهلين! شو بتحب تطلب؟</div>
+            <div class="in">اكتب رسالة</div>
+            <div class="send"><i class="ico i-paper-plane"></i></div>
+          </div>
+
+          <!-- one-tap call -->
+          <div id="s4-call" class="s4-ov">
+            <div id="s4-r1" class="s4-ring"></div><div id="s4-r2" class="s4-ring"></div><div id="s4-r3" class="s4-ring"></div>
+            <div class="av"><img src="assets/clients/chikenhut-logo.jpg" alt="" /></div>
+            <div class="n">Chiken Hut</div>
+            <div class="st">جاري الاتصال…</div>
+            <div class="num">0993354919</div>
+            <div class="end"><i class="ico i-phone"></i></div>
+          </div>
+
+          <!-- save contact -->
+          <div id="s4-card" class="s4-ov">
+            <div class="tt"><i class="ico i-user-plus"></i>جهة اتصال جديدة</div>
+            <img src="assets/clients/chikenhut-logo.jpg" alt="" />
+            <div class="n">Chiken Hut</div>
+            <div class="f"><i class="ico i-phone"></i><span class="v">0993354919</span></div>
+            <div class="f"><i class="ico i-location-dot"></i><span>حلب - الجميلية</span></div>
+          </div>
+          <div id="s4-toast"><i class="ico i-circle-check"></i>انحفظ الرقم</div>
+
+          <!-- map with route -->
+          <div id="s4-map" class="s4-ov">
+            <svg class="streets" viewBox="0 0 488 1034" width="488" height="1034">
+              <rect x="0" y="0" width="488" height="1034" fill="#e8eee6" />
+              <rect x="300" y="430" width="150" height="120" rx="10" fill="#cfe8c8" />
+              <rect x="30" y="120" width="120" height="160" rx="10" fill="#cfe8c8" />
+              <path d="M-20 300 L520 250" stroke="#fff" stroke-width="34" />
+              <path d="M-20 640 L520 600" stroke="#fff" stroke-width="40" />
+              <path d="M110 -20 L110 1060" stroke="#fff" stroke-width="30" />
+              <path d="M350 -20 L330 1060" stroke="#fff" stroke-width="34" />
+              <path d="M-20 900 L520 960" stroke="#fff" stroke-width="26" />
+              <path d="M220 280 L230 1060" stroke="#fff" stroke-width="18" />
+              <path d="M-20 420 C 160 470, 300 380, 520 430" stroke="#ffe8a3" stroke-width="22" fill="none" />
+              <path id="s4-route-shadow" d="M110 840 L110 628 L340 612 L344 268" />
+              <path id="s4-route" d="M110 840 L110 628 L340 612 L344 268" />
+            </svg>
+            <div id="s4-me"></div>
+            <div id="s4-pinlabel">Chiken Hut</div>
+            <div id="s4-pin"><i class="ico i-location-dot"></i></div>
+            <div id="s4-eta"><div class="go"><i class="ico i-route"></i></div><div><div class="t">٧ دقايق</div><div class="a">أسرع طريق لعند Chiken Hut</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="s4-l1c" class="s4-label clip" data-start="3.9" data-duration="3.3" data-track-index="3"><div id="s4-l1" class="p"><i class="ico i-whatsapp" style="color:#25d366"></i>واتساب فوراً</div></div>
+    <div id="s4-l2c" class="s4-label clip" data-start="7.5" data-duration="2.7" data-track-index="3"><div id="s4-l2" class="p"><i class="ico i-phone" style="color:#fca5a5"></i>اتصال بضغطة</div></div>
+    <div id="s4-l3c" class="s4-label clip" data-start="10.6" data-duration="2.6" data-track-index="3"><div id="s4-l3" class="p"><i class="ico i-user-plus" style="color:#fcd34d"></i>احفظ الرقم</div></div>
+    <div id="s4-l4c" class="s4-label clip" data-start="13.5" data-duration="3.6" data-track-index="3"><div id="s4-l4" class="p"><i class="ico i-route" style="color:#93c5fd"></i>الموقع والاتجاهات</div></div>
+    <div id="s4-l5c" class="s4-label clip" data-start="17.4" data-duration="2.2" data-track-index="3"><div id="s4-l5" class="p"><i class="ico i-instagram" style="color:#f9a8d4"></i>كل حساباتك</div></div>
+  </div>
+
+  
+</div></body></html>

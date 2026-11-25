@@ -34,7 +34,8 @@
   font-family: var(--font); direction: rtl; font-weight: 500;
   font-size: 58px; line-height: 1.35; color: var(--muted); text-align: center;
 }
-.accent { color: var(--amber); }
+.accent { color: #c2570c; }            /* deep amber: 4.5:1 on the light grounds */
+.on-dark .accent { color: #fbbf24; }    /* bright amber on teal and dark grounds */
 .teal { color: var(--teal); }
 
 /* ---------- icons (Font Awesome 6.5.2 SVGs as masks, coloured by currentColor) ---------- */
