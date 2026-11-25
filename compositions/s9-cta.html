@@ -479,31 +479,31 @@
 
   <script>
     (function () {
-      // Timed directly to the voiceover (scene-local seconds). Words: «لينك تريز دوت لينك» 0.56–1.9, «رابط واحد» 2.9,
-      // «وكل حضورك أونلاين» 4.2–5.4, «اطلب صفحتك اليوم عبر واتساب» 6.2–8.2; the card then holds to 11.44
+      // Reading-time seconds (music-only cut): logo 0.1, wordmark 0.6, «رابط واحد… وكل حضورك أونلاين» 1.4, link 2.4,
+      // QR + «امسح الرمز» 3.2, WhatsApp button 4.2; everything then holds to the end (9.5)
       const tl = gsap.timeline({ paused: true });
-      tl.fromTo("#s9-rays", { rotation: 0, opacity: 0 }, { rotation: 14, opacity: 1, duration: 11.4, ease: "none" }, 0);
+      tl.fromTo("#s9-rays", { rotation: 0, opacity: 0 }, { rotation: 12, opacity: 1, duration: 9.45, ease: "none" }, 0);
       tl.fromTo("#s9-logo", { scale: 0, rotation: -14, opacity: 0 }, { scale: 1, rotation: 0, opacity: 1, duration: 0.9, ease: "back.out(1.6)" }, 0.1);
       tl.fromTo("#s9-word", { opacity: 0, scale: 1.12, filter: "blur(6px)" }, { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.7, ease: "expo.out" }, 0.55);
-      tl.fromTo("#s9-tag .w", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.16, ease: "power4.out", stagger: 0.32 }, 2.8);
-      tl.fromTo("#s9-url", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.6, ease: "expo.out" }, 5.0);
+      tl.fromTo("#s9-tag .w", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.16, ease: "power4.out", stagger: 0.12 }, 1.4);
+      tl.fromTo("#s9-url", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.6, ease: "expo.out" }, 2.4);
 
       // the QR card pops in and draws itself module by module
-      tl.fromTo("#s9-qrcard", { opacity: 0, scale: 0.7, y: 30 }, { opacity: 1, scale: 1, y: 0, duration: 0.6, ease: "back.out(1.7)" }, 5.5);
-      tl.fromTo("#s9-qrbox .qf", { opacity: 0, scale: 0, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.25, ease: "back.out(2)", stagger: { amount: 0.3 } }, 5.65);
-      tl.fromTo("#s9-qrbox .qm", { opacity: 0, scale: 0, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.2, ease: "back.out(2)", stagger: { amount: 1.0 } }, 5.9);
+      tl.fromTo("#s9-qrcard", { opacity: 0, scale: 0.7, y: 30 }, { opacity: 1, scale: 1, y: 0, duration: 0.6, ease: "back.out(1.7)" }, 3.2);
+      tl.fromTo("#s9-qrbox .qf", { opacity: 0, scale: 0, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.25, ease: "back.out(2)", stagger: { amount: 0.3 } }, 3.35);
+      tl.fromTo("#s9-qrbox .qm", { opacity: 0, scale: 0, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.2, ease: "back.out(2)", stagger: { amount: 1.0 } }, 3.6);
 
       // the WhatsApp button lands on «اطلب صفحتك», then pulses (finite)
-      tl.fromTo("#s9-btn", { opacity: 0, scale: 0.6, y: 40 }, { opacity: 1, scale: 1, y: 0, duration: 0.6, ease: "back.out(1.7)" }, 6.1);
-      tl.fromTo("#s9-glow", { boxShadow: "0 0 0 0px rgba(37,211,102,0.65)" }, { boxShadow: "0 0 0 40px rgba(37,211,102,0)", duration: 1.0, ease: "power2.out", repeat: 4 }, 6.8);
-      tl.fromTo("#s9-btn", { scale: 1 }, { scale: 1.05, duration: 0.5, yoyo: true, repeat: 7, ease: "sine.inOut", immediateRender: false }, 6.8);
+      tl.fromTo("#s9-btn", { opacity: 0, scale: 0.6, y: 40 }, { opacity: 1, scale: 1, y: 0, duration: 0.6, ease: "back.out(1.7)" }, 4.2);
+      tl.fromTo("#s9-glow", { boxShadow: "0 0 0 0px rgba(37,211,102,0.65)" }, { boxShadow: "0 0 0 40px rgba(37,211,102,0)", duration: 1.0, ease: "power2.out", repeat: 4 }, 4.9);
+      tl.fromTo("#s9-btn", { scale: 1 }, { scale: 1.05, duration: 0.5, yoyo: true, repeat: 7, ease: "sine.inOut", immediateRender: false }, 4.9);
 
       // a scan line sweeps the QR twice while the card holds
-      [7.4, 9.4].forEach((t) => {
+      [5.6, 7.6].forEach((t) => {
         tl.fromTo("#s9-scan", { y: 0, opacity: 0 }, { y: 195, opacity: 1, duration: 0.9, ease: "power1.inOut", immediateRender: false }, t);
         tl.to("#s9-scan", { opacity: 0, duration: 0.15 }, t + 0.9);
       });
-      tl.set({}, {}, 11.42);
+      tl.set({}, {}, 9.48);
       window.__timelines["s9"] = tl;
     })();
   </script>

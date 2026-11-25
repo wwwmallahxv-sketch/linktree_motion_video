@@ -45,10 +45,13 @@
     <div id="s1-ground"></div>
     <div id="s1-flood"></div>
 
-    <h1 id="s1-h1" class="s1-head safe-head headline clip" data-start="0.00" data-base-start="0" data-base-duration="5" data-duration="12.51" data-track-index="2">
+    <h1 id="s1-h0" class="s1-head safe-head headline clip" data-start="0" data-duration="2.95" data-track-index="2">
+      <span class="w">عندك</span> <span class="w">محل</span> <span class="w">أو</span> <span class="w accent">مطعم؟</span>
+    </h1>
+    <h1 id="s1-h1" class="s1-head safe-head headline clip" data-start="2.9" data-duration="3.75" data-track-index="3">
       <span class="w">زبونك</span> <span class="w">كل</span> <span class="w">شوي</span> <span class="w accent">بيسأل…</span>
     </h1>
-    <h1 id="s1-h2" class="s1-head safe-head headline clip" data-start="12.21" data-base-start="4.8" data-base-duration="5.2" data-duration="4.20" data-track-index="2">
+    <h1 id="s1-h2" class="s1-head safe-head headline clip" data-start="6.6" data-duration="4.1" data-track-index="2">
       <span class="w">وأنت</span> <span class="w">بتبعت</span> <span class="w accent">٥ روابط</span>
     </h1>
 
@@ -92,9 +95,8 @@
 
   <script>
     (function () {
-      // authored second → second on the voiceover. Words: «شو رقمك» 6.5, «وين موقعك» 8.3,
-      // «عندك إنستغرام» 10.2, «وإنت كل مرة» 12.3, «بتبعت خمس روابط» 14.4
-      const ANCHORS = [[0, 0], [0.85, 6.45], [1.7, 8.2], [2.45, 10.15], [3.1, 11.0], [4.55, 12.0], [4.9, 12.3], [4.95, 12.45], [6.55, 14.35], [8.9, 15.55], [10, 16.41]];
+      // authored second → reading-time second (music-only cut): each caption holds 2.5 s+, no two lines enter together
+      const ANCHORS = [[0, 0], [0.85, 3.6], [1.7, 4.4], [2.45, 5.2], [3.1, 5.9], [4.55, 6.2], [4.9, 6.7], [4.95, 7.0], [6.55, 8.3], [8.9, 9.5], [9.3, 9.9], [10, 10.5]];
       const tl = hfRetime(gsap.timeline({ paused: true }), ANCHORS);
       const raw = tl.raw;
       const blurIn = (sel, at) =>
@@ -103,20 +105,22 @@
       const blurOut = (sel, at) =>
         tl.to(sel, { opacity: 0, filter: "blur(8px)", duration: 0.18, ease: "power2.in", stagger: 0.04 }, at);
 
-      // headlines (the first is on screen at frame 0: the hook)
-      tl.set("#s1-h1 .w", { opacity: 1, filter: "blur(0px)" }, 0);
+      // headlines: «عندك محل أو مطعم؟» is on screen at frame 0 (the hook); reading-time positions on the raw timeline
+      raw.set("#s1-h0 .w", { opacity: 1, filter: "blur(0px)" }, 0);
+      raw.to("#s1-h0 .w", { opacity: 0, filter: "blur(8px)", duration: 0.18, ease: "power2.in", stagger: 0.04 }, 2.65);
+      raw.fromTo("#s1-h1 .w", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.16, ease: "power4.out", stagger: 0.08 }, 3.0);
       blurOut("#s1-h1 .w", 4.55);
       blurIn("#s1-h2 .w", 4.9);
       blurOut("#s1-h2 .w", 9.05);
 
       tl.fromTo("#s1-phone", { y: 60 }, { y: 0, duration: 0.9, ease: "expo.out" }, 0);
 
-      // a customer is typing while the voice sets the scene (voiceover seconds, on the raw timeline)
-      raw.fromTo("#s1-typing", { opacity: 0, scale: 0.6, transformOrigin: "100% 0%" }, { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(1.8)" }, 1.4);
+      // a customer is typing before the questions pour in (raw timeline = final seconds)
+      raw.fromTo("#s1-typing", { opacity: 0, scale: 0.6, transformOrigin: "100% 0%" }, { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(1.8)" }, 1.1);
       ["#s1-d1", "#s1-d2", "#s1-d3"].forEach((d, i) =>
-        raw.fromTo(d, { y: 0 }, { y: -10, duration: 0.22, yoyo: true, repeat: 9, ease: "sine.inOut" }, 1.8 + i * 0.12));
-      raw.to("#s1-typing", { opacity: 0, scale: 0.6, duration: 0.15, ease: "power2.in" }, 6.2);
-      raw.set("#s1-typing", { display: "none" }, 6.38);
+        raw.fromTo(d, { y: 0 }, { y: -10, duration: 0.22, yoyo: true, repeat: 7, ease: "sine.inOut" }, 1.4 + i * 0.12));
+      raw.to("#s1-typing", { opacity: 0, scale: 0.6, duration: 0.15, ease: "power2.in" }, 3.35);
+      raw.set("#s1-typing", { display: "none" }, 3.52);
 
       // incoming questions land on the words; badge counts up
       const ins = ["#s1-b1", "#s1-b2", "#s1-b3", "#s1-b4", "#s1-b5"];
@@ -163,7 +167,7 @@
       // phone drops away, ground floods teal: the pile stays for scene 2
       tl.to("#s1-phone", { y: 1500, rotation: -6, duration: 0.6, ease: "power3.in" }, 8.9);
       tl.to("#s1-flood", { opacity: 1, duration: 0.45, ease: "power2.inOut" }, 9.3);
-      raw.set({}, {}, 16.38);
+      raw.set({}, {}, 10.68);
 
       window.__timelines["s1"] = raw;
     })();

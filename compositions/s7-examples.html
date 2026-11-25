@@ -7,15 +7,20 @@
         linear-gradient(90deg, rgba(15,118,110,0.06) 1px, transparent 1px) 0 0 / 60px 60px, #f6faf9; }
     /* each phone sits at the same base spot (centre 540,970) and moves by transform */
     .s7-ph { left: 244px; top: 227px; }   /* centre (504,760), inside the platform-safe box */
-    .s7-link { position: absolute; left: 120px; right: 192px; top: 1165px; text-align: center; }
-    .s7-link .link-pill { font-size: 36px; padding: 16px 32px; }
-    .s7-link .link-pill.long { font-size: 25px; padding: 18px 24px; }
+    .s7-link { position: absolute; left: 120px; right: 192px; text-align: center; }
+    .s7-link .link-pill { font-size: 32px; padding: 12px 28px 12px 14px; }
+    .s7-link .link-pill.long { font-size: 23px; padding: 14px 22px 14px 12px; }
     .s7-small { position: absolute; width: 340px; text-align: center; direction: ltr; font-family: var(--font); font-weight: 700; font-size: 21px; color: var(--teal-ink); }
     .s7-small b { color: var(--teal); font-weight: 700; }
     .s7-small.long { font-size: 15.5px; }
     .s7-head { position: absolute; left: 120px; right: 192px; top: 296px; }
     .s7-head .w { display: inline-block; }
     #s7-count { position: absolute; left: 120px; right: 192px; top: 392px; text-align: center; font-family: var(--font); font-weight: 700; font-size: 36px; color: var(--muted); direction: rtl; }
+    .s7-link .link-pill { display: inline-flex; align-items: center; gap: 14px; }
+    .s7-link .lg { width: 44px; height: 44px; border-radius: 50%; background: #fff center / cover; box-shadow: 0 0 0 2px #e5ebea; flex: none; }
+    .s7-link .lg.tg { display: grid; place-items: center; background: #054239; color: #229ED9; font-size: 24px; }
+    #s7-subc { position: absolute; left: 120px; right: 192px; top: 1192px; text-align: center; }
+    #s7-sub { display: inline-block; padding: 6px 26px; border-radius: 999px; background: var(--teal); color: #fff; font-family: var(--font); font-weight: 700; font-size: 34px; direction: rtl; }
   </style>
 
   <div data-hf-id="hf-4arl" id="root" data-composition-id="s7" data-width="1080" data-height="1920">
@@ -98,67 +103,57 @@
     </div></div></div></div>
 
     <!-- big link under the phone in focus -->
-    <div data-hf-id="hf-ulmn" id="s7-k1c" class="s7-link clip" data-start="0.65" data-base-start="0.5" data-base-duration="1.9" data-duration="0.95" data-track-index="3"><div data-hf-id="hf-6vng" id="s7-k1"><span data-hf-id="hf-qj07" class="link-pill"><span data-hf-id="hf-p9s1">linktrees.link/<span data-hf-id="hf-ukn5" class="slug">chikenhut</span></span></span></div></div>
-    <div data-hf-id="hf-t201" id="s7-k2c" class="s7-link clip" data-start="1.70" data-base-start="2.6" data-base-duration="1.9" data-duration="0.95" data-track-index="3"><div data-hf-id="hf-fjjb" id="s7-k2"><span data-hf-id="hf-af1z" class="link-pill"><span data-hf-id="hf-aimt">linktrees.link/<span data-hf-id="hf-kiej" class="slug">devmmnd</span></span></span></div></div>
-    <div data-hf-id="hf-6uh7" id="s7-k3c" class="s7-link clip" data-start="2.75" data-base-start="4.7" data-base-duration="1.9" data-duration="0.92" data-track-index="3"><div data-hf-id="hf-blfa" id="s7-k3"><span data-hf-id="hf-a0qy" class="link-pill"><span data-hf-id="hf-bpjw">linktrees.link/<span data-hf-id="hf-2isz" class="slug">courseing</span></span></span></div></div>
-    <div data-hf-id="hf-zrdd" id="s7-k4c" class="s7-link clip" data-start="3.75" data-base-start="6.8" data-base-duration="2.2" data-duration="0.94" data-track-index="3"><div data-hf-id="hf-mgwx" id="s7-k4"><span data-hf-id="hf-m3qr" class="link-pill long"><span data-hf-id="hf-bb8v">linktrees.link/<span data-hf-id="hf-zz3u" class="slug">https-t-me-free-studen-ts</span></span></span></div></div>
+    <!-- links under each pair of phones, one at a time -->
+    <div id="s7-k1c" class="s7-link clip" style="top:960px" data-start="0.45" data-duration="3.3" data-track-index="3"><div id="s7-k1"><span class="link-pill"><span class="lg" style="background-image:url('assets/clients/chikenhut-logo.jpg')"></span><span>linktrees.link/<span class="slug">chikenhut</span></span></span></div></div>
+    <div id="s7-k2c" class="s7-link clip" style="top:1060px" data-start="1.05" data-duration="2.75" data-track-index="4"><div id="s7-k2"><span class="link-pill"><span class="lg" style="background-image:url('assets/clients/devmmnd-logo.png')"></span><span>linktrees.link/<span class="slug">devmmnd</span></span></span></div></div>
+    <div id="s7-k3c" class="s7-link clip" style="top:960px" data-start="4.15" data-duration="3.3" data-track-index="3"><div id="s7-k3"><span class="link-pill"><span class="lg" style="background-image:url('assets/clients/courseing-logo.png')"></span><span>linktrees.link/<span class="slug">courseing</span></span></span></div></div>
+    <div id="s7-k4c" class="s7-link clip" style="top:1060px" data-start="4.75" data-duration="2.75" data-track-index="4"><div id="s7-k4"><span class="link-pill long"><span class="lg tg"><i class="ico i-telegram"></i></span><span>linktrees.link/<span class="slug">https-t-me-free-studen-ts</span></span></span></div></div>
 
-    <!-- grid: small links under each phone -->
-    <div data-hf-id="hf-zpf6" id="s7-gl" class="clip" data-start="5.02" data-base-start="9.4" data-base-duration="5.6" data-duration="3.00" data-track-index="4">
-      <div data-hf-id="hf-h69a" id="s7-g1" class="s7-small" style="left:470px;top:800px">linktrees.link/<b data-hf-id="hf-nd9u">chikenhut</b></div>
-      <div data-hf-id="hf-bg94" id="s7-g2" class="s7-small" style="left:200px;top:800px">linktrees.link/<b data-hf-id="hf-mr14">devmmnd</b></div>
-      <div data-hf-id="hf-mdz6" id="s7-g3" class="s7-small" style="left:470px;top:1218px">linktrees.link/<b data-hf-id="hf-911s">courseing</b></div>
-      <div data-hf-id="hf-2573" id="s7-g4" class="s7-small long" style="left:200px;top:1221px">linktrees.link/<b data-hf-id="hf-wylx">https-t-me-free-studen-ts</b></div>
-    </div>
-    <h1 data-hf-id="hf-vnk8" id="s7-h" class="s7-head headline clip" data-start="4.96" data-base-start="9.3" data-base-duration="5.7" data-duration="3.06" data-track-index="2">
-      <span data-hf-id="hf-nbm2" class="w">عملاء</span> <span data-hf-id="hf-ko4h" class="w accent">حقيقيين</span>
+    <h1 id="s7-h" class="s7-head headline clip" data-start="7.45" data-duration="3.2" data-track-index="2">
+      <span class="w">عملاء</span> <span class="w accent">حقيقيين…</span><br /><span class="w">وغيرهم</span> <span class="w">كتير</span>
     </h1>
-    <div data-hf-id="hf-88id" id="s7-countc" class="clip" data-start="5.48" data-base-start="10.4" data-base-duration="4.6" data-duration="2.54" data-track-index="5"><div data-hf-id="hf-drx8" id="s7-count">وغيرهم كتير…</div></div>
+    <div id="s7-subc" class="clip" data-start="8.05" data-duration="2.6" data-track-index="5"><div id="s7-sub">رابط واحد لكل شي</div></div>
   </div>
 
   <script>
     (function () {
-      // authored second → voiceover second. Words: «تشيكن هَت» 1.0, «ديف مايند» 1.9, «كورسينغ» 3.0, «وغيرهم كتير» 4.0,
-      // «صار عندهم رابط واحد» 5.6
-      const ANCHORS = [[0, 0.4], [2.1, 1.45], [4.2, 2.5], [6.3, 3.55], [8.9, 4.6], [9.35, 5.0], [10.45, 5.5], [14.45, 7.5], [15, 8.02]];
-      const tl = hfRetime(gsap.timeline({ paused: true }), ANCHORS);
+      // Reading-time seconds (music-only cut). Pair 1 (Chiken Hut, Devmmnd) 0–3.7, pair 2 (Courseing, students' group) 3.7–7.4,
+      // each link held 2.7 s+ and entering 0.6 s after the previous; then the grid with «عملاء حقيقيين… وغيرهم كتير» and «رابط واحد لكل شي»
+      const tl = gsap.timeline({ paused: true });
       const phones = ["#s7-p1", "#s7-p2", "#s7-p3", "#s7-p4"];
-      const links = ["#s7-k1", "#s7-k2", "#s7-k3", "#s7-k4"];
-      // grid cells (centre offsets from the base centre 540,970), first item top-right for RTL reading
-      const cells = [{ x: 136, y: -140 }, { x: -134, y: -140 }, { x: 136, y: 280 }, { x: -134, y: 280 }];
+      // offsets from the base centre (504,760); first item on the right for RTL reading
+      const pair = [{ x: 136, y: -60 }, { x: -134, y: -60 }];
+      const cells = [{ x: 136, y: -80 }, { x: -134, y: -80 }, { x: 136, y: 250 }, { x: -134, y: 250 }];
+      phones.forEach((p, i) => tl.fromTo(p, { x: pair[i % 2].x, y: 1700, scale: 0.42, rotation: 0 }, { y: 1700, duration: 0.01 }, 0));
+      const linkIn = (id, at) => tl.fromTo(id, { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.4, ease: "expo.out" }, at);
+      const linkOut = (id, at) => tl.to(id, { opacity: 0, y: -12, duration: 0.16, ease: "power2.in" }, at);
 
-      phones.forEach((p) => tl.fromTo(p, { x: -1100, y: 0, scale: 0.74, rotation: 0 }, { x: -1100, duration: 0.01 }, 0));
+      // pair 1 rises in, links one at a time
+      tl.to("#s7-p1", { y: pair[0].y, duration: 0.6, ease: "expo.out" }, 0.0);
+      tl.to("#s7-p2", { y: pair[1].y, duration: 0.6, ease: "expo.out" }, 0.12);
+      linkIn("#s7-k1", 0.5);
+      linkIn("#s7-k2", 1.1);
+      linkOut("#s7-k1", 3.55); linkOut("#s7-k2", 3.6);
+      tl.to(["#s7-p1", "#s7-p2"], { y: -1300, duration: 0.45, ease: "power3.in" }, 3.35);
 
-      // carousel: each page slides in from the left, holds with its link, leaves to the right
-      phones.forEach((p, i) => {
-        const t = 0.0 + i * 2.1;
-        tl.to(p, { x: 0, rotation: 0, duration: 0.6, ease: "expo.out" }, t);
-        tl.fromTo(p, { rotation: -6 }, { rotation: 0, duration: 0.6, ease: "expo.out", immediateRender: false }, t);
-        tl.fromTo(links[i], { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.45, ease: "expo.out" }, t + 0.5);
-        if (i < 3) {
-          tl.to(links[i], { opacity: 0, y: -10, duration: 0.15, ease: "power2.in" }, t + 2.25);
-          tl.to(p, { x: 1100, rotation: 6, duration: 0.45, ease: "power3.in" }, t + 2.05);
-        }
-      });
-      tl.to("#s7-k4", { opacity: 0, duration: 0.15 }, 8.85);
+      // pair 2
+      tl.to("#s7-p3", { y: pair[0].y, duration: 0.6, ease: "expo.out" }, 3.7);
+      tl.to("#s7-p4", { y: pair[1].y, duration: 0.6, ease: "expo.out" }, 3.82);
+      linkIn("#s7-k3", 4.2);
+      linkIn("#s7-k4", 4.8);
+      linkOut("#s7-k3", 7.25); linkOut("#s7-k4", 7.3);
 
-      // all four settle into a grid
-      phones.forEach((p, i) => {
-        tl.to(p, { x: cells[i].x, y: cells[i].y, scale: 0.33, rotation: 0, duration: 0.75, ease: "power3.inOut" }, 8.9 + i * 0.06);
-      });
-      tl.fromTo("#s7-h .w", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.16, ease: "power4.out", stagger: 0.1 }, 9.35);
-      tl.fromTo(["#s7-g1", "#s7-g2", "#s7-g3", "#s7-g4"], { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.4, ease: "expo.out", stagger: 0.08 }, 9.5);
-      tl.fromTo("#s7-count", { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.3, ease: "power3.out" }, 10.45);
+      // all four settle into a grid; pair 1 returns from above
+      tl.fromTo(["#s7-p1", "#s7-p2"], { y: -1300 }, { y: (i) => cells[i].y, x: (i) => cells[i].x, scale: 0.28, duration: 0.7, ease: "power3.out", immediateRender: false }, 7.0);
+      tl.to("#s7-p3", { x: cells[2].x, y: cells[2].y, scale: 0.28, duration: 0.7, ease: "power3.inOut" }, 7.0);
+      tl.to("#s7-p4", { x: cells[3].x, y: cells[3].y, scale: 0.28, duration: 0.7, ease: "power3.inOut" }, 7.06);
+      tl.fromTo("#s7-h .w", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.16, ease: "power4.out", stagger: 0.1 }, 7.5);
+      tl.fromTo("#s7-sub", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.4, ease: "expo.out" }, 8.1);
       // small life in the grid: each page scrolls a little, one after another
-      phones.forEach((p, i) => tl.fromTo(p + " .lp", { y: 0 }, { y: -120, duration: 0.9, ease: "power2.inOut", yoyo: true, repeat: 1 }, 10.6 + i * 0.7));
+      phones.forEach((p, i) => tl.fromTo(p + " .lp", { y: 0 }, { y: -120, duration: 0.7, ease: "power2.inOut", yoyo: true, repeat: 1 }, 8.3 + i * 0.5));
+      tl.set({}, {}, 10.63);
 
-      // exit: grid drops away for scene 8
-      tl.to("#s7-h .w", { opacity: 0, filter: "blur(8px)", duration: 0.18, ease: "power2.in", stagger: 0.04 }, 14.45);
-      tl.to(["#s7-g1", "#s7-g2", "#s7-g3", "#s7-g4", "#s7-count"], { opacity: 0, duration: 0.2 }, 14.45);
-      phones.forEach((p, i) => tl.to(p, { y: "+=1400", duration: 0.45, ease: "power3.in" }, 14.5 + i * 0.04));
-      tl.raw.set({}, {}, 8.0);
-
-      window.__timelines["s7"] = tl.raw;
+      window.__timelines["s7"] = tl;
     })();
   </script>
 </template>

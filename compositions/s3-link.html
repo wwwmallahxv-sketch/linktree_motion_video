@@ -42,10 +42,10 @@
   <div id="root" data-composition-id="s3" data-width="1080" data-height="1920">
     <div id="s3-ground"></div>
     <div id="s3-stage">
-      <h1 id="s3-h1" class="s3-head safe-head headline clip" data-start="0.27" data-base-start="0.2" data-base-duration="7.4" data-duration="6.21" data-track-index="2">
+      <h1 id="s3-h1" class="s3-head safe-head headline clip" data-start="0.25" data-duration="4.95" data-track-index="2">
         <span class="w">رابط</span> <span class="w">قصير</span> <span class="w accent">باسمك</span>
       </h1>
-      <h1 id="s3-h2" class="s3-head safe-head headline clip" data-start="6.41" data-base-start="7.5" data-base-duration="4.5" data-duration="2.66" data-track-index="2">
+      <h1 id="s3-h2" class="s3-head safe-head headline clip" data-start="5.2" data-duration="5.45" data-track-index="2">
         <span class="w">سهل</span> <span class="w">ينحفظ…</span><br /><span class="w teal">سهل</span> <span class="w teal">ينبعت</span>
       </h1>
 
@@ -55,7 +55,7 @@
         </div>
       </div>
 
-      <div id="s3-labelclip" class="clip" data-start="4.56" data-base-start="2.2" data-base-duration="6.6" data-duration="2.69" data-track-index="3"><div id="s3-label"><div class="arrow"></div><span class="tag">اسم محلك</span></div></div>
+      <div id="s3-labelclip" class="clip" data-start="2.35" data-duration="5.4" data-track-index="3"><div id="s3-label"><div class="arrow"></div><span class="tag">اسم محلك</span></div></div>
 
       <div id="s3-app1" class="s3-app" style="left:160px;background:#25d366"><i class="ico i-whatsapp"></i></div>
       <div id="s3-app2" class="s3-app" style="left:384px;background:linear-gradient(45deg,#f9a825,#e1306c 55%,#8e44ad)"><i class="ico i-instagram"></i></div>
@@ -71,9 +71,9 @@
 
   <script>
     (function () {
-      // authored second → voiceover second. Words: «بنعطيك رابط قصير باسمك» 0.55, «لينك تريز دوت لينك» 2.8–3.9,
-      // «اسم محلك» 4.6, «سهل ينحفظ» 6.5, «وسهل ينبعت» 7.8
-      const ANCHORS = [[0, 0], [0.3, 0.4], [0.85, 3.55], [1.05, 3.7], [2.25, 4.6], [4.6, 5.0], [7.4, 6.35], [8.3, 6.9], [9.5, 7.75], [11.45, 8.6], [12, 9.07]];
+      // authored second → reading-time second: «رابط قصير باسمك» 0.3–4.9, «اسم محلك» 2.4–7.6,
+      // «سهل ينحفظ… سهل ينبعت» 5.3 to the end; slug cycles 3.9–6.6; link sent to the apps 8.2
+      const ANCHORS = [[0, 0], [0.3, 0.3], [0.85, 0.85], [1.05, 1.0], [2.25, 2.4], [4.6, 3.9], [5.2, 4.2], [6.6, 4.95], [6.8, 5.3], [7.1, 5.6], [7.6, 5.9], [8.55, 7.6], [8.6, 7.65], [9.5, 8.2], [11.45, 10.1], [12, 10.6]];
       const tl = hfRetime(gsap.timeline({ paused: true }), ANCHORS);
       const show = (id, t) => tl.set(id, { display: "inline" }, t);
       const hide = (id, t) => tl.set(id, { display: "none" }, t);
@@ -102,8 +102,8 @@
       tl.to("#s3-label", { opacity: 0, y: 20, duration: 0.2, ease: "power2.in" }, 8.55);
 
       // «سهل ينحفظ… سهل ينبعت»: headline swap, link copies fly into the apps
-      tl.to("#s3-h1 .w", { opacity: 0, filter: "blur(8px)", duration: 0.18, ease: "power2.in", stagger: 0.04 }, 7.3);
-      tl.fromTo("#s3-h2 .w", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.16, ease: "power4.out", stagger: 0.1 }, 7.55);
+      tl.to("#s3-h1 .w", { opacity: 0, filter: "blur(8px)", duration: 0.18, ease: "power2.in", stagger: 0.04 }, 6.6);
+      tl.fromTo("#s3-h2 .w", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.16, ease: "power4.out", stagger: 0.1 }, 6.8);
       ["#s3-app1", "#s3-app2", "#s3-app3"].forEach((id, i) =>
         tl.fromTo(id, { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.55, ease: "back.out(1.7)" }, 8.6 + i * 0.08));
       const dest = [-274, -50, 174];
@@ -118,7 +118,7 @@
 
       // whip up and out; scene 4's phone rises from below
       tl.to("#s3-stage", { y: -1900, duration: 0.5, ease: "power3.in" }, 11.45);
-      tl.raw.set({}, {}, 9.05);
+      tl.raw.set({}, {}, 10.6);
 
       window.__timelines["s3"] = tl.raw;
     })();

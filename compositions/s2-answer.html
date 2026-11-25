@@ -52,16 +52,16 @@
     <div id="s2-pill"><i class="ico i-link"></i><span>linktrees<b>.link</b></span></div>
 
     <div id="s2-logo"><img src="assets/brand/logo.png" alt="Linktrees.link" /></div>
-    <div id="s2-wordclip" class="clip" data-start="4.15" data-base-start="3.1" data-base-duration="4.3" data-duration="1.39" data-track-index="3"><div id="s2-word" class="wordmark">Linktrees<b>.link</b></div></div>
-    <h1 id="s2-h" class="s2-head safe-head headline on-dark clip" data-start="2.28" data-base-start="2.4" data-base-duration="5" data-duration="3.25" data-track-index="2">
+    <div id="s2-wordclip" class="clip" data-start="2.55" data-duration="3.3" data-track-index="3"><div id="s2-word" class="wordmark">Linktrees<b>.link</b></div></div>
+    <h1 id="s2-h" class="s2-head safe-head headline on-dark clip" data-start="1.75" data-duration="4.1" data-track-index="2">
       <span class="w">كل</span> <span class="w">شي…</span> <span class="w accent">برابط</span> <span class="w accent">واحد</span>
     </h1>
   </div>
 
   <script>
     (function () {
-      // authored second → voiceover second. Words: «كل هالشي» 1.6, «صار برابط واحد» 2.2–3.2, «لينك تريز دوت لينك» 4.2
-      const ANCHORS = [[0, 0], [1.2, 1.65], [1.95, 2.2], [2.5, 2.3], [3.1, 4.15], [7.0, 5.3], [8, 5.89]];
+      // authored second → reading-time second: pill 1.2, «كل شي… برابط واحد» 1.85, wordmark 2.6, all hold to 5.6
+      const ANCHORS = [[0, 0], [1.2, 1.2], [1.95, 1.7], [2.5, 1.85], [3.1, 2.6], [7.0, 5.6], [8, 6.2]];
       const tl = hfRetime(gsap.timeline({ paused: true }), ANCHORS);
 
       // pile spots copied from scene 1's end state
@@ -96,7 +96,7 @@
       tl.to("#s2-pill", { y: 0, duration: 0.6, ease: "power3.inOut" }, 7.1);
       tl.to("#s2-off", { opacity: 1, duration: 0.4, ease: "power2.inOut" }, 7.35);
       tl.to("#s2-rays", { opacity: 0, duration: 0.3 }, 7.35);
-      tl.raw.set({}, {}, 5.87);
+      tl.raw.set({}, {}, 6.17);
 
       window.__timelines["s2"] = tl.raw;
     })();
