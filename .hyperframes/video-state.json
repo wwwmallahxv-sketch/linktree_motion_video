@@ -2136,5 +2136,16 @@
         "attribution": "unversioned"
       }
     ]
-  }
+  },
+  "renders": {
+    "latest": {
+      "id": "306fbaa7-399d-44bb-af76-bc960eea118d",
+      "completedAt": 1795587644798,
+      "output": "/tmp/claude-0/-home-user-linktree-motion-video/f7e06363-8b67-580d-b23b-c4b55111c3c1/scratchpad/draft-full.mp4",
+      "status": "completed",
+      "revision": null
+    },
+    "retainedRevisions": []
+  },
+  "pendingArtifactCleanup": []
 }
