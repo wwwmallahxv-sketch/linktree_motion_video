@@ -7,3 +7,5 @@ frames/
 .DS_Store
 Thumbs.db
 .env
+.hyperframes/artifacts/
+.hyperframes/cache/

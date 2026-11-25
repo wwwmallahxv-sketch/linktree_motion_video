@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/vendor/gsap.min.js"></script>
+    <link rel="stylesheet" href="assets/css/common.css" />
+    <style>
+      html,
+      body {
+        margin: 0;
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: #f6faf9;
+      }
+      #root {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        font-family: "IBM Plex Sans Arabic", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+      Linktrees.link explainer · 1080×1920 · 30fps
+      Scene slots below follow the estimated voiceover timing from PROMPT.md.
+      When assets/voiceover.mp3 and assets/music.mp3 arrive, re-time every slot to the
+      real voiceover and enable the two audio tracks at the bottom of #root.
+    -->
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="118"
+      data-width="1080"
+      data-height="1920"
+    >
+      <div id="s1" data-composition-id="s1" data-composition-src="compositions/s1-problem.html"
+        data-start="0" data-duration="10" data-track-index="1" data-track-kind="graphics"
+        data-width="1080" data-height="1920"></div>
+      <div id="s2" data-composition-id="s2" data-composition-src="compositions/s2-answer.html"
+        data-start="10" data-duration="8" data-track-index="1" data-track-kind="graphics"
+        data-width="1080" data-height="1920"></div>
+      <div id="s3" data-composition-id="s3" data-composition-src="compositions/s3-link.html"
+        data-start="18" data-duration="12" data-track-index="1" data-track-kind="graphics"
+        data-width="1080" data-height="1920"></div>
+      <div id="s4" data-composition-id="s4" data-hidden="true"
+        data-start="30" data-duration="20" data-track-index="1" data-track-kind="graphics"
+        data-width="1080" data-height="1920"></div>
+      <div id="s5" data-composition-id="s5" data-hidden="true"
+        data-start="50" data-duration="12" data-track-index="1" data-track-kind="graphics"
+        data-width="1080" data-height="1920"></div>
+      <div id="s6" data-composition-id="s6" data-hidden="true"
+        data-start="62" data-duration="23" data-track-index="1" data-track-kind="graphics"
+        data-width="1080" data-height="1920"></div>
+      <div id="s7" data-composition-id="s7" data-hidden="true"
+        data-start="85" data-duration="15" data-track-index="1" data-track-kind="graphics"
+        data-width="1080" data-height="1920"></div>
+      <div id="s8" data-composition-id="s8" data-hidden="true"
+        data-start="100" data-duration="10" data-track-index="1" data-track-kind="graphics"
+        data-width="1080" data-height="1920"></div>
+      <div id="s9" data-composition-id="s9" data-hidden="true"
+        data-start="110" data-duration="8" data-track-index="1" data-track-kind="graphics"
+        data-width="1080" data-height="1920"></div>
+
+      <!-- Audio placeholders: uncomment once the files exist in assets/.
+      <audio id="voiceover" src="assets/voiceover.mp3" data-start="0" data-track-index="3" data-volume="1"></audio>
+      <audio id="music" src="assets/music.mp3" data-start="0" data-duration="118" data-track-index="4" data-volume="0.35" data-fade-out="2"></audio>
+      -->
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = gsap.timeline({ paused: true });
+    </script>
+  </body>
+</html>

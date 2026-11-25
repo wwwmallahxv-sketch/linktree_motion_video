@@ -1,0 +1,159 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; }
+    #s1-ground { position: absolute; inset: 0;
+      background: radial-gradient(900px 700px at 50% 38%, #dff5ee 0%, rgba(223,245,238,0) 70%),
+        linear-gradient(rgba(15,118,110,0.06) 1px, transparent 1px) 0 0 / 60px 60px,
+        linear-gradient(90deg, rgba(15,118,110,0.06) 1px, transparent 1px) 0 0 / 60px 60px, #f6faf9; }
+    #s1-flood { position: absolute; inset: 0; opacity: 0;
+      background: radial-gradient(1200px 1000px at 50% 45%, #14907f 0%, #0f766e 45%, #134e4a 100%); }
+
+    .s1-head { position: absolute; left: 60px; right: 60px; top: 250px; }
+    .s1-head .w { display: inline-block; }
+
+    #s1-phone { left: 280px; top: 540px; }
+    .s1-chat { position: absolute; inset: 0; background: #efeae2; font-family: var(--font); direction: rtl; }
+    .s1-bar { position: absolute; z-index: 5; left: 0; right: 0; top: 0; height: 150px; padding: 62px 26px 0;
+      background: #0b5e54; color: #fff; display: flex; align-items: center; gap: 16px; }
+    .s1-av { width: 60px; height: 60px; border-radius: 50%; background: #d6ede8; display: grid; place-items: center; color: #0b5e54; font-size: 26px; }
+    .s1-who { flex: 1; }
+    .s1-who .n { font-size: 26px; font-weight: 700; }
+    .s1-who .m { font-size: 18px; opacity: 0.8; }
+    .s1-badge { position: relative; width: 52px; height: 52px; border-radius: 50%; background: var(--wa); color: #fff; font-size: 26px; font-weight: 700; }
+    .s1-badge span { position: absolute; inset: 0; display: grid; place-items: center; opacity: 0; }
+    .s1-feed { position: absolute; left: 0; right: 0; top: 170px; padding: 0 18px; }
+    .s1-b { position: relative; max-width: 410px; margin-bottom: 18px; padding: 16px 26px; border-radius: 24px;
+      font-size: 38px; font-weight: 500; line-height: 1.35; color: #111b21; box-shadow: 0 2px 2px rgba(0,0,0,0.08); }
+    .s1-b.in { background: #fff; margin-left: auto; border-top-right-radius: 6px; }
+    .s1-b.out { background: #d9fdd3; margin-right: auto; border-top-left-radius: 6px; direction: ltr; text-align: left;
+      font-size: 28px; color: #027eb5; display: flex; align-items: center; gap: 12px; }
+    .s1-b.out .ico { font-size: 28px; color: #0b5e54; }
+    .s1-b .who { display: block; font-size: 19px; font-weight: 700; color: #0f766e; margin-bottom: 2px; }
+
+    .s1-chip { position: absolute; width: 440px; height: 112px; border-radius: 30px; background: #fff;
+      display: flex; align-items: center; gap: 20px; padding: 0 26px; direction: ltr;
+      font-family: var(--font); font-weight: 700; font-size: 32px; color: var(--teal-ink);
+      box-shadow: 0 22px 44px rgba(11,31,28,0.22), 0 3px 8px rgba(11,31,28,0.12); }
+    .s1-chip .c { width: 66px; height: 66px; border-radius: 20px; display: grid; place-items: center; color: #fff; font-size: 34px; flex: none; }
+  </style>
+
+  <div id="root" data-composition-id="s1" data-width="1080" data-height="1920">
+    <div id="s1-ground"></div>
+    <div id="s1-flood"></div>
+
+    <h1 id="s1-h1" class="s1-head headline clip" data-start="0" data-duration="5" data-track-index="2">
+      <span class="w">زبونك</span> <span class="w">كل</span> <span class="w">شوي</span> <span class="w accent">بيسأل…</span>
+    </h1>
+    <h1 id="s1-h2" class="s1-head headline clip" data-start="4.8" data-duration="5.2" data-track-index="2">
+      <span class="w">وأنت</span> <span class="w">بتبعت</span> <span class="w accent">٥ روابط</span>
+    </h1>
+
+    <div id="s1-phone" class="phone">
+      <div class="island"></div>
+      <div class="screen">
+        <div class="s1-chat">
+          <div class="s1-bar">
+            <div class="s1-av"><i class="ico i-user-plus"></i></div>
+            <div class="s1-who"><div class="n">زباين المحل</div><div class="m">رسائل جديدة</div></div>
+            <div class="s1-badge">
+              <span id="s1-n1">1</span><span id="s1-n2">2</span><span id="s1-n3">3</span><span id="s1-n4">4</span><span id="s1-n5">5</span><span id="s1-n6"><b class="ltr">+9</b></span>
+            </div>
+          </div>
+          <div id="s1-feed" class="s1-feed">
+            <div id="s1-b1" class="s1-b in"><span class="who">زبون</span>شو رقمك؟</div>
+            <div id="s1-b2" class="s1-b in"><span class="who">زبونة</span>وين موقعك؟</div>
+            <div id="s1-b3" class="s1-b in"><span class="who">زبون</span>عندك إنستغرام؟</div>
+            <div id="s1-b4" class="s1-b in"><span class="who">زبون جديد</span>بعتلي رقم الواتساب</div>
+            <div id="s1-b5" class="s1-b in"><span class="who">زبونة</span>كيف بوصل لعندك؟</div>
+            <div id="s1-o1" class="s1-b out"><i class="ico i-whatsapp"></i>wa.me/9639…</div>
+            <div id="s1-o2" class="s1-b out"><i class="ico i-location-dot"></i>maps.app.goo.gl/…</div>
+            <div id="s1-o3" class="s1-b out"><i class="ico i-instagram"></i>instagram.com/…</div>
+            <div id="s1-o4" class="s1-b out"><i class="ico i-facebook-f"></i>facebook.com/…</div>
+            <div id="s1-o5" class="s1-b out"><i class="ico i-phone"></i>tel:09…</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- the five links that fly out and pile up; final spots are shared with scene 2 -->
+    <div id="s1-c1" class="s1-chip"><span class="c" style="background:#25d366"><i class="ico i-whatsapp"></i></span>wa.me/9639…</div>
+    <div id="s1-c2" class="s1-chip"><span class="c" style="background:#e1306c"><i class="ico i-instagram"></i></span>instagram.com/…</div>
+    <div id="s1-c3" class="s1-chip"><span class="c" style="background:#ea4335"><i class="ico i-location-dot"></i></span>maps.app.goo.gl/…</div>
+    <div id="s1-c4" class="s1-chip"><span class="c" style="background:#1877f2"><i class="ico i-facebook-f"></i></span>facebook.com/…</div>
+    <div id="s1-c5" class="s1-chip"><span class="c" style="background:#0f766e"><i class="ico i-phone"></i></span>tel:09…</div>
+  </div>
+
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const blurIn = (sel, at) =>
+        tl.fromTo(sel, { opacity: 0, filter: "blur(8px)" },
+          { opacity: 1, filter: "blur(0px)", duration: 0.16, ease: "power4.out", stagger: 0.08 }, at);
+      const blurOut = (sel, at) =>
+        tl.to(sel, { opacity: 0, filter: "blur(8px)", duration: 0.18, ease: "power2.in", stagger: 0.04 }, at);
+
+      // headlines
+      tl.set("#s1-h1 .w", { opacity: 1, filter: "blur(0px)" }, 0);
+      blurIn("#s1-h1 .w", 0.0);
+      blurOut("#s1-h1 .w", 4.55);
+      blurIn("#s1-h2 .w", 4.9);
+      blurOut("#s1-h2 .w", 9.05);
+
+      // phone settles in from just below (already mostly in frame at 0)
+      tl.fromTo("#s1-phone", { y: 60 }, { y: 0, duration: 0.9, ease: "expo.out" }, 0);
+
+      // incoming customer questions; badge counts up
+      const ins = ["#s1-b1", "#s1-b2", "#s1-b3", "#s1-b4", "#s1-b5"];
+      const times = [0.0, 0.85, 1.7, 2.45, 3.1];
+      // the first question is already on screen at frame 0 (the hook)
+      tl.set("#s1-b1", { opacity: 1 }, 0);
+      ins.forEach((id, i) => {
+        if (i === 0) return;
+        tl.fromTo(id, { opacity: 0, scale: 0.7, x: 40, transformOrigin: "100% 0%" },
+          { opacity: 1, scale: 1, x: 0, duration: 0.45, ease: "back.out(1.6)" }, times[i]);
+      });
+      ["#s1-n1", "#s1-n2", "#s1-n3", "#s1-n4", "#s1-n5"].forEach((id, i) => {
+        if (i === 0) { tl.set(id, { opacity: 1 }, 0); return; }
+        tl.fromTo(id, { opacity: 0 }, { opacity: 1, duration: 0.05 }, times[i]);
+        if (i > 0) tl.to(["#s1-n1", "#s1-n2", "#s1-n3", "#s1-n4"][i - 1], { opacity: 0, duration: 0.05 }, times[i]);
+      });
+      tl.fromTo(".s1-badge", { scale: 1 }, { scale: 1.25, duration: 0.12, yoyo: true, repeat: 9, ease: "power1.inOut" }, 0.0);
+      // a small shake as the chat overflows
+      tl.fromTo("#s1-phone", { rotation: 0 }, { rotation: 1.6, duration: 0.07, yoyo: true, repeat: 5, ease: "sine.inOut" }, 3.2);
+
+      // owner answers with five separate links; feed scrolls up to make room
+      tl.to("#s1-feed", { y: -400, duration: 0.8, ease: "power2.inOut" }, 4.6);
+      ["#s1-o1", "#s1-o2", "#s1-o3", "#s1-o4", "#s1-o5"].forEach((id, i) => {
+        tl.fromTo(id, { opacity: 0, scale: 0.8, x: -30, transformOrigin: "0% 0%" },
+          { opacity: 1, scale: 1, x: 0, duration: 0.35, ease: "back.out(1.5)" }, 4.95 + i * 0.28);
+      });
+      tl.to("#s1-feed", { y: -640, duration: 0.6, ease: "power2.inOut" }, 5.9);
+      tl.fromTo("#s1-n6", { opacity: 0 }, { opacity: 1, duration: 0.05 }, 5.4);
+      tl.to("#s1-n5", { opacity: 0, duration: 0.05 }, 5.4);
+
+      // the links fly out of the phone and land in a messy pile (spots shared with scene 2)
+      const pile = [
+        { id: "#s1-c1", x: 70, y: 1150, r: -12 },
+        { id: "#s1-c2", x: 560, y: 1230, r: 9 },
+        { id: "#s1-c3", x: 130, y: 1380, r: 7 },
+        { id: "#s1-c4", x: 520, y: 1450, r: -8 },
+        { id: "#s1-c5", x: 300, y: 1560, r: 14 },
+      ];
+      pile.forEach((c, i) => {
+        tl.fromTo(c.id,
+          { x: 320, y: 1000, rotation: 0, scale: 0.4, opacity: 0 },
+          { x: c.x, y: c.y, rotation: c.r, scale: 1, opacity: 1, duration: 0.75, ease: "back.out(1.3)" },
+          6.55 + i * 0.22);
+      });
+      // they jostle as each new one lands
+      tl.fromTo(["#s1-c1", "#s1-c2", "#s1-c3"], { xPercent: 0 }, { xPercent: 2, duration: 0.08, yoyo: true, repeat: 3, ease: "sine.inOut" }, 7.6);
+
+      // phone drops away, ground floods teal: the pile stays for scene 2
+      tl.to("#s1-phone", { y: 1500, rotation: -6, duration: 0.6, ease: "power3.in" }, 8.9);
+      tl.to("#s1-flood", { opacity: 1, duration: 0.45, ease: "power2.inOut" }, 9.3);
+      tl.set({}, {}, 9.99);
+
+      window.__timelines["s1"] = tl;
+    })();
+  </script>
+</template>
