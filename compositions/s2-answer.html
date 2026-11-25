@@ -2,37 +2,38 @@
   <style>
     #root { position: absolute; inset: 0; overflow: hidden; }
     #s2-ground { position: absolute; inset: 0;
-      background: radial-gradient(1200px 1000px at 50% 45%, #14907f 0%, #0f766e 45%, #134e4a 100%); }
-    #s2-rays { position: absolute; left: -460px; top: -40px; width: 2000px; height: 2000px; opacity: 0;
+      background: radial-gradient(1200px 1000px at 47% 45%, #14907f 0%, #0f766e 45%, #134e4a 100%); }
+    #s2-rays { position: absolute; left: -496px; top: -260px; width: 2000px; height: 2000px; opacity: 0;
       background: repeating-conic-gradient(from 0deg at 50% 50%, rgba(255,255,255,0.07) 0deg 6deg, transparent 6deg 18deg); }
     #s2-off { position: absolute; inset: 0; opacity: 0;
       background: linear-gradient(rgba(15,118,110,0.06) 1px, transparent 1px) 0 0 / 60px 60px,
         linear-gradient(90deg, rgba(15,118,110,0.06) 1px, transparent 1px) 0 0 / 60px 60px, #f6faf9; }
 
-    .s2-chip { position: absolute; left: 0; top: 0; width: 440px; height: 112px; border-radius: 30px; background: #fff;
-      display: flex; align-items: center; gap: 20px; padding: 0 26px; direction: ltr;
-      font-family: var(--font); font-weight: 700; font-size: 32px; color: var(--teal-ink);
+    .s2-chip { position: absolute; left: 0; top: 0; width: 360px; height: 92px; border-radius: 26px; background: #fff;
+      display: flex; align-items: center; gap: 16px; padding: 0 20px; direction: ltr;
+      font-family: var(--font); font-weight: 700; font-size: 28px; color: var(--teal-ink);
       box-shadow: 0 22px 44px rgba(11,31,28,0.22), 0 3px 8px rgba(11,31,28,0.12); }
-    .s2-chip .c { width: 66px; height: 66px; border-radius: 20px; display: grid; place-items: center; color: #fff; font-size: 34px; flex: none; }
+    .s2-chip .c { width: 56px; height: 56px; border-radius: 17px; display: grid; place-items: center; color: #fff; font-size: 29px; flex: none; }
 
-    #s2-flash { position: absolute; left: 540px; top: 960px; width: 40px; height: 40px; margin: -20px 0 0 -20px; border-radius: 50%;
+    #s2-flash { position: absolute; left: 504px; top: 960px; width: 40px; height: 40px; margin: -20px 0 0 -20px; border-radius: 50%;
       background: radial-gradient(circle, #fff 0%, rgba(255,255,255,0.6) 40%, rgba(255,255,255,0) 70%); opacity: 0; }
 
-    /* one link: 620 wide, centred at (540, 960); scene 3 starts from the same pill */
-    #s2-pill { position: absolute; left: 230px; top: 904px; width: 620px; height: 112px; border-radius: 56px; background: #fff;
+    /* one link: 560 wide, centred at (504, 960); scene 3 starts from the same pill */
+    #s2-pill { position: absolute; left: 224px; top: 904px; width: 560px; height: 112px; border-radius: 56px; background: #fff;
       display: flex; align-items: center; justify-content: center; gap: 18px; direction: ltr;
-      font-family: var(--font); font-weight: 700; font-size: 50px; color: var(--teal-ink);
+      font-family: var(--font); font-weight: 700; font-size: 46px; color: var(--teal-ink);
       box-shadow: 0 24px 60px rgba(0,0,0,0.25); }
-    #s2-pill .ico { font-size: 40px; color: var(--teal); }
+    #s2-pill .ico { font-size: 38px; color: var(--teal); }
     #s2-pill b { color: var(--teal); font-weight: 700; }
 
-    #s2-logo { position: absolute; left: 400px; top: 470px; width: 280px; height: 280px; border-radius: 64px;
+    #s2-logo { position: absolute; left: 379px; top: 330px; width: 250px; height: 250px; border-radius: 58px;
       box-shadow: 0 0 0 8px rgba(255,255,255,0.9), 0 30px 80px rgba(0,0,0,0.35), 0 0 120px rgba(16,185,129,0.6); }
-    #s2-logo img { width: 100%; height: 100%; border-radius: 64px; display: block; }
+    #s2-logo img { width: 100%; height: 100%; border-radius: 58px; display: block; }
 
-    .s2-head { position: absolute; left: 60px; right: 60px; top: 1130px; }
     .s2-head .w { display: inline-block; }
-    #s2-word { position: absolute; left: 0; right: 0; top: 1300px; text-align: center; font-size: 84px; color: #fff; }
+    #s2-h { top: 755px; font-size: 76px; }
+    #s2-wordclip { position: absolute; left: 120px; right: 192px; top: 615px; }
+    #s2-word { text-align: center; font-size: 76px; color: #fff; }
     #s2-word b { color: #a7f3d0; }
   </style>
 
@@ -51,52 +52,53 @@
     <div id="s2-pill"><i class="ico i-link"></i><span>linktrees<b>.link</b></span></div>
 
     <div id="s2-logo"><img src="assets/brand/logo.png" alt="Linktrees.link" /></div>
-    <h1 id="s2-h" class="s2-head headline on-dark clip" data-start="2.4" data-duration="5.0" data-track-index="2">
+    <div id="s2-wordclip" class="clip" data-start="4.15" data-base-start="3.1" data-base-duration="4.3" data-duration="1.39" data-track-index="3"><div id="s2-word" class="wordmark">Linktrees<b>.link</b></div></div>
+    <h1 id="s2-h" class="s2-head safe-head headline on-dark clip" data-start="2.28" data-base-start="2.4" data-base-duration="5" data-duration="3.25" data-track-index="2">
       <span class="w">كل</span> <span class="w">شي…</span> <span class="w accent">برابط</span> <span class="w accent">واحد</span>
     </h1>
-    <div id="s2-wordclip" class="clip" data-start="3.1" data-duration="4.3" data-track-index="3"><div id="s2-word" class="wordmark">Linktrees<b>.link</b></div></div>
   </div>
 
   <script>
     (function () {
-      const tl = gsap.timeline({ paused: true });
+      // authored second → voiceover second. Words: «كل هالشي» 1.6, «صار برابط واحد» 2.2–3.2, «لينك تريز دوت لينك» 4.2
+      const ANCHORS = [[0, 0], [1.2, 1.65], [1.95, 2.2], [2.5, 2.3], [3.1, 4.15], [7.0, 5.3], [8, 5.89]];
+      const tl = hfRetime(gsap.timeline({ paused: true }), ANCHORS);
 
       // pile spots copied from scene 1's end state
       const pile = [
-        { id: "#s2-c1", x: 70, y: 1150, r: -12 },
-        { id: "#s2-c2", x: 560, y: 1230, r: 9 },
-        { id: "#s2-c3", x: 130, y: 1380, r: 7 },
-        { id: "#s2-c4", x: 520, y: 1450, r: -8 },
-        { id: "#s2-c5", x: 300, y: 1560, r: 14 },
+        { id: "#s2-c1", x: 140, y: 900, r: -12 },
+        { id: "#s2-c2", x: 410, y: 960, r: 9 },
+        { id: "#s2-c3", x: 160, y: 1050, r: 7 },
+        { id: "#s2-c4", x: 400, y: 1110, r: -8 },
+        { id: "#s2-c5", x: 270, y: 1150, r: 14 },
       ];
-      // the links get pulled together and squeezed into one (centre 540,960)
       pile.forEach((c, i) => {
         tl.fromTo(c.id, { x: c.x, y: c.y, rotation: c.r, scale: 1, opacity: 1 },
-          { x: 320, y: 904, rotation: 0, scale: 0.75, duration: 0.85, ease: "power3.in" }, 0.25 + i * 0.06);
+          { x: 324, y: 914, rotation: 0, scale: 0.75, duration: 0.85, ease: "power3.in" }, 0.25 + i * 0.06);
         tl.to(c.id, { opacity: 0, duration: 0.08 }, 1.2);
       });
       tl.fromTo("#s2-flash", { scale: 0, opacity: 0 }, { scale: 26, opacity: 1, duration: 0.25, ease: "power2.out" }, 1.15);
       tl.to("#s2-flash", { opacity: 0, duration: 0.45, ease: "power2.in" }, 1.4);
       tl.fromTo("#s2-pill", { scale: 0.55, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.7, ease: "back.out(1.7)" }, 1.2);
       tl.fromTo("#s2-rays", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power2.out" }, 1.2);
-      tl.fromTo("#s2-rays", { rotation: 0 }, { rotation: 12, duration: 6.79, ease: "none" }, 1.2);
+      tl.fromTo("#s2-rays", { rotation: 0 }, { rotation: 12, duration: 5.8, ease: "none" }, 1.2);
 
-      // pill steps down, the logo springs in above it
-      tl.to("#s2-pill", { y: 560, duration: 0.7, ease: "power3.inOut" }, 2.0);
+      // pill steps down, logo springs in above, wordmark and line between
+      tl.to("#s2-pill", { y: 56, duration: 0.7, ease: "power3.inOut" }, 2.0);
       tl.fromTo("#s2-logo", { scale: 0, rotation: -14, opacity: 0 }, { scale: 1, rotation: 0, opacity: 1, duration: 0.9, ease: "back.out(1.6)" }, 1.95);
       tl.fromTo("#s2-h .w", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.16, ease: "power4.out", stagger: 0.09 }, 2.5);
       tl.fromTo("#s2-word", { opacity: 0, scale: 1.12, filter: "blur(6px)" }, { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.8, ease: "expo.out" }, 3.1);
 
-      // hand-off: everything clears, ground turns off-white, the pill returns to centre for scene 3
+      // hand-off: everything clears, ground turns off-white, the pill returns for scene 3
       tl.to("#s2-h .w", { opacity: 0, filter: "blur(8px)", duration: 0.18, ease: "power2.in", stagger: 0.04 }, 7.0);
       tl.to("#s2-word", { opacity: 0, y: 30, duration: 0.25, ease: "power2.in" }, 7.0);
       tl.to("#s2-logo", { scale: 0.6, opacity: 0, duration: 0.3, ease: "power3.in" }, 7.0);
       tl.to("#s2-pill", { y: 0, duration: 0.6, ease: "power3.inOut" }, 7.1);
       tl.to("#s2-off", { opacity: 1, duration: 0.4, ease: "power2.inOut" }, 7.35);
       tl.to("#s2-rays", { opacity: 0, duration: 0.3 }, 7.35);
-      tl.set({}, {}, 7.99);
+      tl.raw.set({}, {}, 5.87);
 
-      window.__timelines["s2"] = tl;
+      window.__timelines["s2"] = tl.raw;
     })();
   </script>
 </template>
