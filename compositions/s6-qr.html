@@ -135,7 +135,7 @@
     #s6-vf3 { left: 100px; top: 382px; border-right: none; border-top: none; border-radius: 0 0 0 16px; }
     #s6-vf4 { left: 232px; top: 382px; border-left: none; border-top: none; border-radius: 0 0 16px 0; }
     #s6-found { position: absolute; left: 30px; right: 30px; top: 610px; padding: 16px 10px; border-radius: 22px; background: rgba(255,255,255,0.95); text-align: center; direction: ltr;
-      font-family: var(--font); font-weight: 700; font-size: 24px; color: #0b1f1c; }
+      font-family: var(--font); font-weight: 700; font-size: 24px; color: #0b1f1c; white-space: nowrap; }
     #s6-found .ico { color: var(--teal); margin-right: 8px; }
     #s6-hp-page { position: absolute; inset: 0; background: #F6EFE6; }
     #s6-hp-page .page-zoom { zoom: 0.933; width: 420px; }
@@ -161,13 +161,39 @@
         <div class="s6-bokeh" style="left:150px;top:600px;width:110px;height:110px"></div>
         <div class="s6-table"></div>
         <div class="s6-plate" style="left:-120px;top:1320px;width:520px;height:330px">
-          <div class="s6-food" style="left:150px;top:90px;width:180px;height:120px;background:radial-gradient(ellipse at 40% 35%,#e0a15a,#a2561f 70%)"></div>
-          <div class="s6-food" style="left:270px;top:130px;width:150px;height:100px;background:radial-gradient(ellipse at 40% 35%,#d99551,#9b4f1c 70%)"></div>
-          <div class="s6-food" style="left:120px;top:190px;width:120px;height:46px;border-radius:12px;background:linear-gradient(#ffd34d,#e6a700);transform:rotate(-20deg)"></div>
+          <!-- café items: a croissant and two maamoul (inside the area the original food used) -->
+          <svg style="position:absolute;left:0;top:0" width="520" height="330" viewBox="0 0 520 330">
+            <g transform="translate(300 128) rotate(-10)">
+              <ellipse cx="-78" cy="18" rx="30" ry="18" transform="rotate(-35 -78 18)" fill="#C98A4A"/>
+              <ellipse cx="78" cy="18" rx="30" ry="18" transform="rotate(35 78 18)" fill="#C98A4A"/>
+              <ellipse cx="-44" cy="-2" rx="34" ry="28" transform="rotate(-20 -44 -2)" fill="#D9A15E"/>
+              <ellipse cx="44" cy="-2" rx="34" ry="28" transform="rotate(20 44 -2)" fill="#D9A15E"/>
+              <ellipse cx="0" cy="-10" rx="38" ry="34" fill="#E2AE6A"/>
+              <path d="M-22 -36 C -26 -14, -24 6, -18 22 M22 -36 C 26 -14, 24 6, 18 22 M-62 -14 C -60 2, -56 14, -50 24 M62 -14 C 60 2, 56 14, 50 24" fill="none" stroke="#A86A33" stroke-width="4" stroke-linecap="round" opacity="0.8"/>
+              <ellipse cx="-6" cy="-30" rx="20" ry="7" fill="#F5D39A" opacity="0.7"/>
+            </g>
+            <g transform="translate(210 212)">
+              <ellipse rx="50" ry="32" fill="#E9CFA4"/><ellipse rx="50" ry="32" fill="none" stroke="#C49B67" stroke-width="3"/>
+              <g fill="#C49B67"><circle cx="-20" cy="-8" r="4"/><circle cx="0" cy="-14" r="4"/><circle cx="20" cy="-8" r="4"/><circle cx="-12" cy="8" r="4"/><circle cx="12" cy="8" r="4"/></g>
+            </g>
+            <g transform="translate(345 222)">
+              <ellipse rx="44" ry="28" fill="#E9CFA4"/><ellipse rx="44" ry="28" fill="none" stroke="#C49B67" stroke-width="3"/>
+              <g fill="#C49B67"><circle cx="-16" cy="-6" r="3.5"/><circle cx="0" cy="-12" r="3.5"/><circle cx="16" cy="-6" r="3.5"/><circle cx="0" cy="6" r="3.5"/></g>
+            </g>
+          </svg>
         </div>
         <div class="s6-plate" style="left:720px;top:1560px;width:520px;height:330px">
-          <div class="s6-food" style="left:110px;top:80px;width:200px;height:140px;background:radial-gradient(ellipse at 45% 35%,#f1c27d,#c47a2c 70%)"></div>
-          <div class="s6-food" style="left:150px;top:100px;width:120px;height:40px;background:#6aa84f;border-radius:30px"></div>
+          <!-- café item: a piece of knafeh with pistachio -->
+          <svg style="position:absolute;left:0;top:0" width="520" height="330" viewBox="0 0 520 330">
+            <g transform="translate(210 150) rotate(-8)">
+              <path d="M-100 -40 L 100 -40 L 110 40 L -90 40 Z" fill="#B95E1E"/>
+              <path d="M-100 -40 L 100 -40 L 104 -8 L -96 -8 Z" fill="#E07A2C"/>
+              <path d="M-96 -8 L 104 -8 L 110 40 L -90 40 Z" fill="#F3E6C8"/>
+              <path d="M-90 30 L 110 30 L 110 40 L -90 40 Z" fill="#C98B4E"/>
+              <g fill="#7FA35A"><circle cx="-60" cy="-26" r="7"/><circle cx="-30" cy="-30" r="6"/><circle cx="0" cy="-24" r="7"/><circle cx="30" cy="-30" r="6"/><circle cx="62" cy="-25" r="7"/><circle cx="-10" cy="-32" r="4"/><circle cx="45" cy="-20" r="4"/></g>
+              <path d="M-80 -36 L 80 -36" stroke="#FFD08A" stroke-width="4" opacity="0.5" stroke-linecap="round"/>
+            </g>
+          </svg>
         </div>
         <div class="s6-cup-saucer" style="left:770px;top:1190px;width:250px;height:150px"></div>
         <div class="s6-cup" style="left:815px;top:1205px;width:160px;height:100px"></div>
