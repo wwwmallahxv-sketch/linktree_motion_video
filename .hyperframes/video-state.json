@@ -4466,11 +4466,11 @@
   },
   "renders": {
     "latest": {
-      "id": "472d53d4-0e5d-4633-873a-8dc36d066d31",
-      "completedAt": 1795591601223,
-      "output": "/tmp/claude-0/-home-user-linktree-motion-video/f7e06363-8b67-580d-b23b-c4b55111c3c1/scratchpad/draft3-full.mp4",
+      "id": "57c880ad-4c78-413c-b912-35850d63f861",
+      "completedAt": 1795787731370,
+      "output": "/tmp/claude-0/-home-user-linktree-motion-video/f7e06363-8b67-580d-b23b-c4b55111c3c1/scratchpad/v4/master-video.mp4",
       "status": "completed",
-      "revision": "a7fe6ef7-67ce-4692-b771-b70259a9a259"
+      "revision": null
     },
     "retainedRevisions": [
       "a7fe6ef7-67ce-4692-b771-b70259a9a259"
