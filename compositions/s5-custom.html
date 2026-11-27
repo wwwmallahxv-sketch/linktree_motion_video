@@ -10,7 +10,7 @@
     #s5-phone { left: 280px; top: 560px; }
     #s5-left { left: -280px; top: 560px; }
     #s5-right { left: 840px; top: 560px; }
-    .s5-head { position: absolute; left: 120px; right: 192px; top: 300px; font-size: 64px !important; }
+    .s5-head { position: absolute; left: 50px; right: 50px; top: 250px; }
     .s5-head .w { display: inline-block; }
 
     /* stacked layers so cover, logo, name and tagline can cross-fade between brands */
@@ -22,13 +22,13 @@
     .s5-stack { position: relative; display: grid; justify-items: center; }
     .s5-stack > * { grid-area: 1 / 1; }
 
-    #s5-signal { position: absolute; z-index: 20; left: 470px; top: 1110px; display: flex; align-items: center; gap: 16px; padding: 16px 28px; border-radius: 999px;
+    #s5-signal { position: absolute; left: 590px; top: 1680px; display: flex; align-items: center; gap: 16px; padding: 16px 28px; border-radius: 999px;
       background: #fff; font-family: var(--font); font-weight: 700; font-size: 40px; color: var(--teal-ink); direction: rtl; box-shadow: 0 18px 40px rgba(11,31,28,0.2); }
     .s5-bars { display: flex; align-items: flex-end; gap: 5px; height: 40px; direction: ltr; }
     .s5-bars i { display: block; width: 10px; border-radius: 3px; background: #d1d5db; }
     .s5-bars i.on { background: #ef4444; }
     #s5-load { position: absolute; z-index: 15; left: 0; top: 0; height: 8px; width: 100%; background: var(--teal-bright); transform-origin: 0 50%; }
-    #s5-fast { position: absolute; z-index: 20; left: 140px; top: 1110px; display: flex; align-items: center; gap: 14px; padding: 16px 28px; border-radius: 999px;
+    #s5-fast { position: absolute; left: 120px; top: 1680px; display: flex; align-items: center; gap: 14px; padding: 16px 28px; border-radius: 999px;
       background: var(--teal); color: #fff; font-family: var(--font); font-weight: 700; font-size: 40px; direction: rtl; box-shadow: 0 18px 40px rgba(15,118,110,0.35); }
     #s5-fast .ico { font-size: 38px; }
 
@@ -39,26 +39,23 @@
     #s5-edit .ico { color: #34d399; font-size: 34px; }
     #s5-pen { position: absolute; z-index: 16; width: 64px; height: 64px; border-radius: 50%; background: var(--amber); color: #fff; display: grid; place-items: center; font-size: 28px;
       box-shadow: 0 10px 24px rgba(180,83,9,0.4); }
-    #s5-link { position: absolute; left: 120px; right: 192px; top: 1105px; text-align: center; }
-    #s5-link .link-pill { font-size: 38px; gap: 14px; padding: 16px 34px; }
-    #s5-link .link-pill .ico { color: var(--teal); font-size: 30px; }
-    #s5-same { display: inline-block; margin-top: 8px; padding: 4px 22px; font-size: 30px !important; border-radius: 999px; background: #ccfbf1; color: var(--teal-deep); font-family: var(--font); font-weight: 700; font-size: 36px; direction: rtl; }
+    #s5-link { position: absolute; left: 0; right: 0; top: 1640px; text-align: center; }
+    #s5-link .link-pill { font-size: 48px; gap: 16px; }
+    #s5-link .link-pill .ico { color: var(--teal); font-size: 38px; }
+    #s5-same { display: inline-block; margin-top: 18px; padding: 8px 26px; border-radius: 999px; background: #ccfbf1; color: var(--teal-deep); font-family: var(--font); font-weight: 700; font-size: 36px; direction: rtl; }
   </style>
 
   <div id="root" data-composition-id="s5" data-width="1080" data-height="1920">
     <div id="s5-ground"></div>
 
-    <h1 id="s5-h1" class="s5-head safe-head headline clip" data-start="0.25" data-duration="5.4" data-track-index="2">
-      <span class="w">على</span> <span class="w">ذوقك:</span><br /><span class="w accent">ألوانك،</span> <span class="w accent">شعارك</span> <span class="w accent">وصورتك</span>
+    <h1 id="s5-h1" class="s5-head headline clip" data-start="0.2" data-duration="5.9" data-track-index="2">
+      <span class="w">على</span> <span class="w">ذوقك:</span><br /><span class="w accent">ألوانك</span> <span class="w accent">وشعارك</span>
     </h1>
-    <h1 id="s5-h2" class="s5-head safe-head headline clip" data-start="5.75" data-duration="3.7" data-track-index="3">
-      <span class="w">عربية</span> <span class="w">وخفيفة…</span><br /><span class="w">بتفتح</span> <span class="w">حتى</span> <span class="w">لو</span> <span class="w">النت</span> <span class="w accent">ضعيف</span>
+    <h1 id="s5-h2" class="s5-head headline clip" data-start="6.1" data-duration="2.75" data-track-index="2">
+      <span class="w">خفيفة…</span><br /><span class="w">حتى</span> <span class="w">لو</span> <span class="w">النت</span> <span class="w accent">ضعيف</span>
     </h1>
-    <h1 id="s5-h3" class="s5-head safe-head headline clip" data-start="9.45" data-duration="3.1" data-track-index="2">
-      <span class="w">بدك</span> <span class="w">تعدّل</span> <span class="w">شي؟</span><br /><span class="w teal">منعدّلك</span> <span class="w teal">ياه</span>
-    </h1>
-    <h1 id="s5-h4" class="s5-head safe-head headline clip" data-start="12.55" data-duration="3.13" data-track-index="3">
-      <span class="w">والرابط</span> <span class="w teal">بيضل</span> <span class="w teal">نفسه</span>
+    <h1 id="s5-h3" class="s5-head headline clip" data-start="8.85" data-duration="3.15" data-track-index="2">
+      <span class="w">عدّل</span> <span class="w">متى</span> <span class="w">بدك…</span><br /><span class="w teal">والرابط</span> <span class="w teal">نفسه</span>
     </h1>
 
     <div id="s5-cam">
@@ -161,11 +158,8 @@
 
   <script>
     (function () {
-      // Reading-time seconds (music-only cut). Captions: «على ذوقك…» 0.3–5.5, «عربية وخفيفة…» 5.8–9.2,
-      // «بدك تعدّل شي؟ منعدّلك ياه» 9.5–12.3, «والرابط بيضل نفسه» 12.6–15.4; badges and tags never enter together with a caption
       const tl = gsap.timeline({ paused: true });
-      // same resting framing as scene 4's end (inside the platform-safe box, clear of a two-line headline)
-      const REST = { x: 504 - 540 * 0.7, y: 870 - 1093 * 0.7, scale: 0.7 };
+      const REST = { x: 540 - 540 * 1.22, y: 1170 - 1093 * 1.22, scale: 1.22 };
       const camTo = (s, cx, cy, at, dur) => tl.to("#s5-cam", { x: cx - 540 * s, y: cy - 1093 * s, scale: s, duration: dur, ease: "power2.inOut" }, at);
       const wordsIn = (sel, at) => tl.fromTo(sel, { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.16, ease: "power4.out", stagger: 0.08 }, at);
       const wordsOut = (sel, at) => tl.to(sel, { opacity: 0, filter: "blur(8px)", duration: 0.18, ease: "power2.in", stagger: 0.04 }, at);
@@ -173,12 +167,12 @@
 
       // initial states
       tl.fromTo(["#s5-cv2", "#s5-cv3", "#s5-av2", "#s5-av3", "#s5-n2", "#s5-n3", "#s5-t2", "#s5-t3"], { opacity: 0 }, { opacity: 0, duration: 0.01 }, 0);
-      tl.fromTo(["#s5-signal", "#s5-fast", "#s5-pen", "#s5-edit"], { opacity: 0 }, { opacity: 0, duration: 0.01 }, 0);
+      tl.fromTo(["#s5-signal", "#s5-fast", "#s5-pen", "#s5-edit", "#s5-link"], { opacity: 0 }, { opacity: 0, duration: 0.01 }, 0);
       tl.fromTo("#s5-load", { scaleX: 0, opacity: 0 }, { scaleX: 0, opacity: 0, duration: 0.01 }, 0);
       tl.fromTo("#s5-left", { x: -700 }, { x: -700, duration: 0.01 }, 0);
       tl.fromTo("#s5-right", { x: 700 }, { x: 700, duration: 0.01 }, 0);
 
-      wordsIn("#s5-h1 .w", 0.3);
+      wordsIn("#s5-h1 .w", 0.25);
 
       // live re-skin: Chiken Hut → Devmmnd → Courseing → back to Chiken Hut
       const themes = {
@@ -194,57 +188,50 @@
         });
         tl.fromTo("#s5-phone", { rotationY: 0 }, { rotationY: 8, duration: 0.25, yoyo: true, repeat: 1, ease: "sine.inOut", immediateRender: false }, at);
       };
-      swap(1, 2, themes.dev, 1.1);    // on the beat grid (0.56 s)
-      swap(2, 3, themes.crs, 2.2);
-      swap(3, 1, themes.ch, 3.35);
+      swap(1, 2, themes.dev, 0.9);
+      swap(2, 3, themes.crs, 1.9);
+      swap(3, 1, themes.ch, 2.9);
 
       // three looks side by side
-      camTo(0.4, 504, 760, 3.9, 0.7);
-      tl.to("#s5-left", { x: 0, duration: 0.7, ease: "expo.out" }, 4.1);
-      tl.to("#s5-right", { x: 0, duration: 0.7, ease: "expo.out" }, 4.2);
-      tl.to("#s5-left", { x: -700, duration: 0.4, ease: "power3.in" }, 5.45);
-      tl.to("#s5-right", { x: 700, duration: 0.4, ease: "power3.in" }, 5.45);
-      wordsOut("#s5-h1 .w", 5.45);
-      camTo(0.7, 504, 870, 5.6, 0.6);
-      tl.set(["#s5-left", "#s5-right"], { opacity: 0 }, 5.9);
+      camTo(0.6, 540, 1080, 3.6, 0.7);
+      tl.to("#s5-left", { x: 0, duration: 0.7, ease: "expo.out" }, 3.85);
+      tl.to("#s5-right", { x: 0, duration: 0.7, ease: "expo.out" }, 3.95);
+      tl.to("#s5-left", { x: -700, duration: 0.4, ease: "power3.in" }, 5.6);
+      tl.to("#s5-right", { x: 700, duration: 0.4, ease: "power3.in" }, 5.6);
+      wordsOut("#s5-h1 .w", 5.75);
+      camTo(1.0, 540, 1080, 5.75, 0.6);
 
-      // Arabic and light: weak signal, the page still opens at once
-      wordsIn("#s5-h2 .w", 5.85);
-      tl.fromTo("#s5-signal", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.8)" }, 6.7);
-      tl.to("#s5-content", { opacity: 0, duration: 0.15 }, 7.1);
-      tl.to("#s5-load", { opacity: 1, duration: 0.01 }, 7.25);
-      tl.to("#s5-load", { scaleX: 1, duration: 0.3, ease: "power2.out" }, 7.25);
-      tl.to("#s5-content", { opacity: 1, duration: 0.2 }, 7.5);
-      tl.to("#s5-load", { opacity: 0, duration: 0.15 }, 7.6);
-      tl.fromTo("#s5-fast", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.8)" }, 7.6);
-      wordsOut("#s5-h2 .w", 9.15);
-      tl.to(["#s5-signal", "#s5-fast"], { opacity: 0, y: -20, duration: 0.2, ease: "power2.in" }, 9.15);
+      // weak signal, but the page still opens instantly
+      wordsIn("#s5-h2 .w", 6.15);
+      tl.fromTo("#s5-signal", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.8)" }, 6.4);
+      tl.to("#s5-content", { opacity: 0, duration: 0.15 }, 6.9);
+      tl.to("#s5-load", { opacity: 1, duration: 0.01 }, 7.05);
+      tl.to("#s5-load", { scaleX: 1, duration: 0.3, ease: "power2.out" }, 7.05);
+      tl.to("#s5-content", { opacity: 1, duration: 0.2 }, 7.3);
+      tl.to("#s5-load", { opacity: 0, duration: 0.15 }, 7.4);
+      tl.fromTo("#s5-fast", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.8)" }, 7.4);
+      wordsOut("#s5-h2 .w", 8.6);
+      tl.to(["#s5-signal", "#s5-fast"], { opacity: 0, y: -20, duration: 0.2, ease: "power2.in" }, 8.6);
 
-      // we edit it for you: a new account appears, «تم التعديل»
-      camTo(0.56, 504, 800, 9.2, 0.6);
-      wordsIn("#s5-h3 .w", 9.55);
-      tl.fromTo("#s5-pen", { opacity: 0, scale: 0, x: 610, y: 770 }, { opacity: 1, scale: 1, x: 610, y: 770, duration: 0.35, ease: "back.out(2)" }, 10.2);
-      tl.to("#s5-pen", { x: 560, y: 815, rotation: -20, duration: 0.3, yoyo: true, repeat: 1, ease: "sine.inOut" }, 10.55);
-      tl.set("#s5-yt", { display: "grid" }, 10.75);
-      tl.fromTo("#s5-yt", { scale: 0 }, { scale: 1, duration: 0.45, ease: "back.out(2.2)", immediateRender: false }, 10.75);
-      tl.to("#s5-pen", { opacity: 0, scale: 0.5, duration: 0.2 }, 11.2);
-      tl.fromTo("#s5-edit", { opacity: 0, scale: 0.7 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.8)" }, 11.3);
-      wordsOut("#s5-h3 .w", 12.3);
-
-      // …and the link stays the same
-      wordsIn("#s5-h4 .w", 12.65);
-      tl.to("#s5-edit", { opacity: 0, duration: 0.2 }, 12.7);
-      tl.fromTo("#s5-link", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.01 }, 0);
-      tl.fromTo("#s5-pill", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.5, ease: "expo.out" }, 13.2);
-      tl.fromTo("#s5-same", { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(2)" }, 13.85);
+      // edit: a new account appears, «تم التعديل», the link underneath never changes
+      camTo(1.0, 540, 1020, 8.65, 0.6);
+      wordsIn("#s5-h3 .w", 8.9);
+      tl.fromTo("#s5-link", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.5, ease: "expo.out" }, 9.0);
+      tl.fromTo("#s5-pen", { opacity: 0, scale: 0, x: 700, y: 1060 }, { opacity: 1, scale: 1, x: 700, y: 1060, duration: 0.35, ease: "back.out(2)" }, 9.3);
+      tl.to("#s5-pen", { x: 610, y: 1140, rotation: -20, duration: 0.3, yoyo: true, repeat: 1, ease: "sine.inOut" }, 9.65);
+      tl.set("#s5-yt", { display: "grid" }, 9.85);
+      tl.fromTo("#s5-yt", { scale: 0 }, { scale: 1, duration: 0.45, ease: "back.out(2.2)", immediateRender: false }, 9.85);
+      tl.to("#s5-pen", { opacity: 0, scale: 0.5, duration: 0.2 }, 10.3);
+      tl.fromTo("#s5-edit", { opacity: 0, scale: 0.7 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.8)" }, 10.25);
       tl.fromTo("#s5-pill", { boxShadow: "0 18px 50px rgba(11,31,28,0.18), 0 0 0 0px rgba(16,185,129,0)" },
-        { boxShadow: "0 18px 50px rgba(11,31,28,0.18), 0 0 0 10px rgba(16,185,129,0.45)", duration: 0.35, yoyo: true, repeat: 1, ease: "power2.inOut", immediateRender: false }, 14.3);
+        { boxShadow: "0 18px 50px rgba(11,31,28,0.18), 0 0 0 10px rgba(16,185,129,0.45)", duration: 0.35, yoyo: true, repeat: 1, ease: "power2.inOut" }, 10.5);
+      tl.to("#s5-edit", { opacity: 0, duration: 0.2 }, 11.3);
 
       // into the QR section: everything clears, ground floods deep teal
-      wordsOut("#s5-h4 .w", 15.15);
-      tl.to(["#s5-cam", "#s5-link"], { opacity: 0, y: "+=80", duration: 0.35, ease: "power3.in" }, 15.2);
-      tl.fromTo("#s5-flood", { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power2.inOut" }, 15.25);
-      tl.set({}, {}, 15.66);
+      wordsOut("#s5-h3 .w", 11.45);
+      tl.to(["#s5-cam", "#s5-link"], { opacity: 0, y: "+=80", duration: 0.35, ease: "power3.in" }, 11.5);
+      tl.fromTo("#s5-flood", { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power2.inOut" }, 11.55);
+      tl.set({}, {}, 11.99);
 
       window.__timelines["s5"] = tl;
     })();

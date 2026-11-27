@@ -7,7 +7,7 @@
         linear-gradient(90deg, rgba(15,118,110,0.06) 1px, transparent 1px) 0 0 / 60px 60px, #f6faf9; }
     #s4-cam { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
     #s4-phone { left: 280px; top: 560px; }
-    .s4-head { position: absolute; left: 120px; right: 192px; top: 300px; font-size: 64px !important; }
+    .s4-head { position: absolute; left: 60px; right: 60px; top: 300px; }
     .s4-head .w { display: inline-block; }
 
     /* highlight states on the real page elements */
@@ -70,17 +70,17 @@
     #s4-eta .a { font-size: 22px; color: #5f6368; }
 
     /* label pill above the phone (one per feature) */
-    .s4-label { position: absolute; left: 120px; right: 192px; top: 296px; text-align: center; z-index: 30; }
+    .s4-label { position: absolute; left: 0; right: 0; top: 200px; text-align: center; }
     .s4-label .p { display: inline-flex; align-items: center; gap: 20px; padding: 20px 46px; border-radius: 999px; background: var(--teal-ink); color: #fff;
-      font-family: var(--font); font-weight: 700; font-size: 54px; direction: rtl; box-shadow: 0 20px 50px rgba(11,31,28,0.35); }
-    .s4-label .p .ico { font-size: 48px; }
+      font-family: var(--font); font-weight: 700; font-size: 62px; direction: rtl; box-shadow: 0 20px 50px rgba(11,31,28,0.35); }
+    .s4-label .p .ico { font-size: 54px; }
   </style>
 
   <div id="root" data-composition-id="s4" data-width="1080" data-height="1920">
     <div id="s4-ground"></div>
 
-    <h1 id="s4-h" class="s4-head safe-head headline clip" data-start="0.42" data-duration="2.95" data-track-index="2">
-      <span class="w">الزبون</span> <span class="w">بيفتح</span> <span class="w">الرابط…</span><br /><span class="w">وبيلاقي</span> <span class="w">كل</span> <span class="w accent">شي</span>
+    <h1 id="s4-h" class="s4-head headline clip" data-start="0.4" data-duration="2.9" data-track-index="2">
+      <span class="w">كل</span> <span class="w">شي</span> <span class="w accent">قدامه</span>
     </h1>
 
     <div id="s4-cam">
@@ -162,34 +162,31 @@
             <div id="s4-me"></div>
             <div id="s4-pinlabel">Chiken Hut</div>
             <div id="s4-pin"><i class="ico i-location-dot"></i></div>
-            <div id="s4-eta"><div class="go"><i class="ico i-route"></i></div><div><div class="t">الطريق جاهز</div><div class="a">أسرع طريق لعند Chiken Hut</div></div></div>
+            <div id="s4-eta"><div class="go"><i class="ico i-route"></i></div><div><div class="t">٧ دقايق</div><div class="a">أسرع طريق لعند Chiken Hut</div></div></div>
           </div>
         </div>
       </div>
     </div>
 
-    <div id="s4-l1c" class="s4-label clip" data-layout-allow-overlap data-layout-allow-occlusion data-start="3.55" data-duration="3.05" data-track-index="3"><div id="s4-l1" class="p"><i class="ico i-whatsapp" style="color:#25d366"></i>واتساب… يحكيك فوراً</div></div>
-    <div id="s4-l2c" class="s4-label clip" data-layout-allow-overlap data-layout-allow-occlusion data-start="6.75" data-duration="3.05" data-track-index="3"><div id="s4-l2" class="p"><i class="ico i-phone" style="color:#fca5a5"></i>اتصال بضغطة وحدة</div></div>
-    <div id="s4-l3c" class="s4-label clip" data-layout-allow-overlap data-layout-allow-occlusion data-start="9.95" data-duration="3.05" data-track-index="3"><div id="s4-l3" class="p"><i class="ico i-user-plus" style="color:#fcd34d"></i>زر يحفظ رقمك عنده</div></div>
-    <div id="s4-l4c" class="s4-label clip" data-layout-allow-overlap data-layout-allow-occlusion data-start="13.15" data-duration="3.25" data-track-index="3"><div id="s4-l4" class="p"><i class="ico i-route" style="color:#93c5fd"></i>موقعك… ويوصل لعندك</div></div>
-    <div id="s4-l5c" class="s4-label clip" data-layout-allow-overlap data-layout-allow-occlusion data-start="16.45" data-duration="2.6" data-track-index="3"><div id="s4-l5" class="p"><i class="ico i-instagram" style="color:#f9a8d4"></i>كل صفحاتك بمكان واحد</div></div>
+    <div id="s4-l1c" class="s4-label clip" data-start="3.9" data-duration="3.3" data-track-index="3"><div id="s4-l1" class="p"><i class="ico i-whatsapp" style="color:#25d366"></i>واتساب فوراً</div></div>
+    <div id="s4-l2c" class="s4-label clip" data-start="7.5" data-duration="2.7" data-track-index="3"><div id="s4-l2" class="p"><i class="ico i-phone" style="color:#fca5a5"></i>اتصال بضغطة</div></div>
+    <div id="s4-l3c" class="s4-label clip" data-start="10.6" data-duration="2.6" data-track-index="3"><div id="s4-l3" class="p"><i class="ico i-user-plus" style="color:#fcd34d"></i>احفظ الرقم</div></div>
+    <div id="s4-l4c" class="s4-label clip" data-start="13.5" data-duration="3.6" data-track-index="3"><div id="s4-l4" class="p"><i class="ico i-route" style="color:#93c5fd"></i>الموقع والاتجاهات</div></div>
+    <div id="s4-l5c" class="s4-label clip" data-start="17.4" data-duration="2.2" data-track-index="3"><div id="s4-l5" class="p"><i class="ico i-instagram" style="color:#f9a8d4"></i>كل حساباتك</div></div>
   </div>
 
   <script>
     (function () {
-      // authored second → reading-time second: opener 0.45–3.2, then one feature every ~3.2 s, each label held 2.8 s+
-      const ANCHORS = [[0, 0], [3.05, 3.2], [3.35, 3.25], [3.95, 3.6], [6.95, 6.4], [7.2, 6.45], [7.55, 6.8], [9.95, 9.6], [10.25, 9.65], [10.65, 10.0], [12.95, 12.8], [13.2, 12.85], [13.55, 13.2], [16.85, 16.2], [17.15, 16.25], [17.45, 16.5], [18.9, 18.2], [19.35, 18.95], [20, 19.0]];
-      const tl = hfRetime(gsap.timeline({ paused: true }), ANCHORS);
+      const tl = gsap.timeline({ paused: true });
       // Element centres in frame px with the camera at rest (measured with tools/measure.js).
       const P = { wa: { x: 467, y: 1158 }, call: { x: 650, y: 1064 }, save: { x: 422, y: 1064 }, map: { x: 536, y: 1323 }, socials: { x: 536, y: 1158 } };
-      // camera: bring point (px,py) to (504, cy) at scale s; origin top-left (x 504 is the platform-safe centre)
+      // camera: bring point (px,py) to (540, cy) at scale s; origin top-left
       const cam = (px, py, s, cy, at, dur, ease) =>
-        tl.to("#s4-cam", { x: 504 - px * s, y: cy - py * s, scale: s, duration: dur || 0.6, ease: ease || "power2.inOut" }, at);
-      // resting view: phone at 0.7× centred at (504,870), inside the platform-safe box and clear of a two-line headline;
-      // scene 5 starts from the same framing
-      const REST = { x: 504 - 540 * 0.7, y: 870 - 1093 * 0.7, scale: 0.7 };
+        tl.to("#s4-cam", { x: 540 - px * s, y: cy - py * s, scale: s, duration: dur || 0.6, ease: ease || "power2.inOut" }, at);
+      // resting view: phone at 1.22× centred at (540,1170); scene 5 starts from the same framing
+      const REST = { x: 540 - 540 * 1.22, y: 1170 - 1093 * 1.22, scale: 1.22 };
       const rest = (at, dur) => tl.to("#s4-cam", { ...REST, duration: dur || 0.6, ease: "power2.inOut" }, at);
-      const screenView = (at) => cam(540, 1093, 0.8, 820, at, 0.6); // phone screen filling the frame under the label
+      const screenView = (at) => cam(540, 1093, 1.36, 1190, at, 0.6); // phone screen filling the frame under the label
       const label = (id, at) => tl.fromTo(id, { y: -30, opacity: 0, scale: 0.9 }, { y: 0, opacity: 1, scale: 1, duration: 0.45, ease: "back.out(1.7)" }, at);
       const unlabel = (id, at) => tl.to(id, { y: -20, opacity: 0, duration: 0.2, ease: "power2.in" }, at);
       const tap = (id, at) => tl.fromTo(id, { scale: 0.3, opacity: 1 }, { scale: 2.6, opacity: 0, duration: 0.5, ease: "power2.out", immediateRender: false }, at);
@@ -211,7 +208,7 @@
       tl.fromTo(["#s4-m1", "#s4-m2"], { opacity: 0, scale: 0.7 }, { opacity: 0, scale: 0.7, duration: 0.01 }, 0);
 
       // 1) WhatsApp: zoom on the icon, it lights up, a chat opens
-      cam(P.wa.x, P.wa.y, 2.7, 800, 3.35, 0.75);
+      cam(P.wa.x, P.wa.y, 2.7, 1080, 3.35, 0.75);
       tl.fromTo("#s4-wa-fill", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 3.95);
       tl.fromTo("#s4-wa .ico", { color: "#450a0a" }, { color: "#ffffff", duration: 0.25 }, 3.95);
       label("#s4-l1", 3.95);
@@ -225,7 +222,7 @@
       unlabel("#s4-l1", 6.95);
 
       // 2) Call: zoom on the call button, press, dialing rings
-      cam(P.call.x, P.call.y, 2.1, 800, 7.2, 0.6);
+      cam(P.call.x, P.call.y, 2.1, 1050, 7.2, 0.6);
       label("#s4-l2", 7.55);
       tl.fromTo("#s4-call-btn", { scale: 1 }, { scale: 0.94, duration: 0.1, yoyo: true, repeat: 1, ease: "power2.inOut" }, 7.95);
       tap("#s4-tap-call", 8.0);
@@ -237,7 +234,7 @@
       unlabel("#s4-l2", 9.95);
 
       // 3) Save contact: zoom on save, a contact card drops into the phone
-      cam(P.save.x, P.save.y, 2.1, 800, 10.25, 0.6);
+      cam(P.save.x, P.save.y, 2.1, 1050, 10.25, 0.6);
       label("#s4-l3", 10.65);
       tl.fromTo("#s4-save-btn", { scale: 1 }, { scale: 0.94, duration: 0.1, yoyo: true, repeat: 1, ease: "power2.inOut" }, 11.0);
       tap("#s4-tap-save", 11.05);
@@ -249,7 +246,7 @@
       unlabel("#s4-l3", 12.95);
 
       // 4) Map: «فتح في الخرائط» opens a route
-      cam(P.map.x, P.map.y, 2.1, 800, 13.2, 0.6);
+      cam(P.map.x, P.map.y, 2.1, 1050, 13.2, 0.6);
       label("#s4-l4", 13.55);
       tl.fromTo("#s4-map-btn", { scale: 1 }, { scale: 0.95, duration: 0.1, yoyo: true, repeat: 1, ease: "power2.inOut" }, 13.95);
       tap("#s4-tap-map", 14.0);
@@ -263,7 +260,7 @@
       unlabel("#s4-l4", 16.85);
 
       // 5) Socials: zoom on the row, icons pop in their own colours
-      cam(P.socials.x, P.socials.y, 2.6, 800, 17.15, 0.6);
+      cam(P.socials.x, P.socials.y, 2.6, 1050, 17.15, 0.6);
       label("#s4-l5", 17.45);
       [["#s4-ig", "#s4-ig-fill"], ["#s4-fb", "#s4-fb-fill"]].forEach(([b, f], i) => {
         tl.fromTo(f, { opacity: 0 }, { opacity: 1, duration: 0.2 }, 17.75 + i * 0.18);
@@ -276,9 +273,9 @@
       tl.to(["#s4-ig-fill", "#s4-fb-fill", "#s4-wa-fill"], { opacity: 0, duration: 0.4 }, 19.0);
       tl.to(["#s4-ig .ico", "#s4-fb .ico", "#s4-wa .ico"], { color: "#450a0a", duration: 0.4 }, 19.0);
       rest(18.9, 0.7);
-      tl.raw.set({}, {}, 19.0);
+      tl.set({}, {}, 19.99);
 
-      window.__timelines["s4"] = tl.raw;
+      window.__timelines["s4"] = tl;
     })();
   </script>
 </template>
