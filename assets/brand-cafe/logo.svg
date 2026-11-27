@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- «سكّر وهيل» — fictional café brand mark: a coffee cup with a cardamom pod. Original artwork. -->
+  <rect width="400" height="400" fill="#F6EFE6"/>
+  <circle cx="200" cy="200" r="172" fill="#EFE3D3"/>
+  <circle cx="200" cy="200" r="172" fill="none" stroke="#6B4A3A" stroke-width="6" stroke-dasharray="2 14" stroke-linecap="round" opacity="0.45"/>
+  <!-- steam -->
+  <path d="M168 118 C 152 100, 184 88, 168 68" fill="none" stroke="#8BA888" stroke-width="10" stroke-linecap="round"/>
+  <path d="M206 112 C 190 92, 222 80, 206 58" fill="none" stroke="#8BA888" stroke-width="10" stroke-linecap="round"/>
+  <!-- saucer -->
+  <ellipse cx="190" cy="286" rx="118" ry="22" fill="#5A3D30"/>
+  <ellipse cx="190" cy="280" rx="118" ry="18" fill="#6B4A3A"/>
+  <!-- cup -->
+  <path d="M110 150 L 270 150 L 256 252 C 252 274, 232 284, 210 284 L 170 284 C 148 284, 128 274, 124 252 Z" fill="#6B4A3A"/>
+  <path d="M270 172 C 318 168, 322 238, 262 236" fill="none" stroke="#6B4A3A" stroke-width="16" stroke-linecap="round"/>
+  <ellipse cx="190" cy="150" rx="80" ry="14" fill="#4A3228"/>
+  <ellipse cx="190" cy="152" rx="68" ry="9" fill="#C9A27E"/>
+  <path d="M128 176 L 132 206" stroke="#F6EFE6" stroke-width="8" stroke-linecap="round" opacity="0.35"/>
+  <!-- cardamom pod leaning on the cup -->
+  <g transform="rotate(-28 300 262)">
+    <path d="M300 214 C 330 232, 332 290, 300 314 C 268 290, 270 232, 300 214 Z" fill="#8BA888"/>
+    <path d="M300 222 C 312 250, 312 280, 300 306" fill="none" stroke="#6E8C6B" stroke-width="5" stroke-linecap="round"/>
+    <path d="M300 214 C 302 204, 308 198, 314 196" fill="none" stroke="#6E8C6B" stroke-width="5" stroke-linecap="round"/>
+  </g>
+</svg>

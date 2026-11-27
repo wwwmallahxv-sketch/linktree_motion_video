@@ -2,8 +2,8 @@
   <style>
     #root { position: absolute; inset: 0; overflow: hidden; background: #0b1f1c; }
     .s6-w { position: absolute; inset: 0; overflow: hidden; }
-    .s6-qr { background: #fff url("assets/qr/chikenhut.svg") center / 92% no-repeat; }
-    .s6-logo { background: url("assets/clients/chikenhut-logo.jpg") center / cover; border-radius: 50%; }
+    .s6-qr { background: #fff url("assets/qr/sukkar-hel.svg") center / 92% no-repeat; }
+    .s6-logo { background: url("assets/brand-cafe/logo.svg") center / cover; border-radius: 50%; }
 
     /* ---------- A: the QR draws itself (also the scale-up shot) ---------- */
     #s6-a { background: radial-gradient(1000px 1000px at 50% 48%, #14907f 0%, #134e4a 55%, #0b1f1c 100%); }
@@ -48,14 +48,14 @@
     .s6-cup { position: absolute; border-radius: 50%; background: radial-gradient(ellipse at 50% 50%, #3b1f0e 0 52%, #6b3a1c 60%, #f5f5f5 64%, #dedede 100%); box-shadow: 0 14px 18px rgba(0,0,0,0.3); }
     .s6-cup-h { position: absolute; width: 44px; height: 30px; border: 10px solid #eee; border-left: none; border-radius: 0 20px 20px 0; }
     #s6-tent { position: absolute; left: 330px; top: 700px; width: 420px; height: 620px; perspective: 1400px; }
-    #s6-tent .back { position: absolute; left: 10px; right: 10px; top: -10px; height: 40px; background: #7f1d1d; border-radius: 10px 10px 0 0; }
+    #s6-tent .back { position: absolute; left: 10px; right: 10px; top: -10px; height: 40px; background: #4A3228; border-radius: 10px 10px 0 0; }
     #s6-tent .front { position: absolute; inset: 0; transform: rotateX(-8deg); transform-origin: 50% 100%; background: #fff; border-radius: 14px; overflow: hidden;
       box-shadow: inset 0 -30px 40px rgba(0,0,0,0.08), 0 30px 40px rgba(0,0,0,0.35); }
-    #s6-tent .band { height: 120px; background: linear-gradient(135deg, #dc2626, #991b1b); display: flex; align-items: center; justify-content: center; gap: 16px; color: #fff;
+    #s6-tent .band { height: 120px; background: linear-gradient(135deg, #6B4A3A, #4A3228); display: flex; align-items: center; justify-content: center; gap: 16px; color: #fff;
       font-family: var(--font); font-weight: 700; font-size: 34px; direction: ltr; }
     #s6-tent .band .s6-logo { width: 78px; height: 78px; border: 3px solid #fff; }
     #s6-tent .q { width: 300px; height: 300px; margin: 34px auto 0; border-radius: 10px; }
-    #s6-tent .cap { margin-top: 26px; text-align: center; font-family: var(--font); font-weight: 700; font-size: 30px; color: #450a0a; direction: rtl; }
+    #s6-tent .cap { margin-top: 26px; text-align: center; font-family: var(--font); font-weight: 700; font-size: 30px; color: #3B2A22; direction: rtl; }
     #s6-tent-shadow { position: absolute; left: 290px; top: 1290px; width: 500px; height: 70px; border-radius: 50%; background: rgba(0,0,0,0.55); filter: blur(18px); }
 
     /* ---------- C: sticker on a glass door ---------- */
@@ -72,10 +72,10 @@
     .s6-handle { position: absolute; left: 860px; top: 760px; width: 40px; height: 560px; border-radius: 20px; background: linear-gradient(90deg, #8d969b, #e7ecee 45%, #9aa3a8 70%, #6f777b); box-shadow: 10px 12px 20px rgba(0,0,0,0.5); }
     .s6-open { position: absolute; left: 160px; top: 520px; padding: 12px 30px; border-radius: 12px; background: #fff; color: #16a34a; font-family: var(--font); font-weight: 700; font-size: 40px; direction: rtl; box-shadow: 0 10px 20px rgba(0,0,0,0.4); transform: rotate(-4deg); }
     #s6-sticker { position: absolute; left: 290px; top: 760px; width: 500px; height: 500px; border-radius: 50%; background: #fff; text-align: center;
-      box-shadow: 0 8px 18px rgba(0,0,0,0.35), inset 0 0 0 14px #dc2626; }
-    #s6-sticker .t1 { padding-top: 48px; font-family: var(--font); font-weight: 700; font-size: 40px; color: #dc2626; direction: rtl; }
+      box-shadow: 0 8px 18px rgba(0,0,0,0.35), inset 0 0 0 14px #6B4A3A; }
+    #s6-sticker .t1 { padding-top: 48px; font-family: var(--font); font-weight: 700; font-size: 40px; color: #6B4A3A; direction: rtl; }
     #s6-sticker .q { width: 250px; height: 250px; margin: 14px auto 0; }
-    #s6-sticker .t2 { margin-top: 10px; font-family: var(--font); font-weight: 700; font-size: 32px; color: #450a0a; direction: ltr; }
+    #s6-sticker .t2 { margin-top: 10px; font-family: var(--font); font-weight: 700; font-size: 32px; color: #3B2A22; direction: ltr; }
     .s6-glare { position: absolute; inset: 0; border-radius: 50%; background: linear-gradient(120deg, rgba(255,255,255,0) 30%, rgba(255,255,255,0.35) 45%, rgba(255,255,255,0) 60%); }
 
     /* ---------- D: printed menu ---------- */
@@ -84,29 +84,29 @@
     #s6-menu-wrap { position: absolute; left: 190px; top: 520px; width: 700px; height: 1000px; perspective: 1600px; }
     #s6-menu { position: absolute; inset: 0; background: #fffaf2; border-radius: 10px; transform: rotateX(22deg) rotateZ(-5deg); transform-origin: 50% 60%;
       box-shadow: 0 60px 80px rgba(0,0,0,0.55), inset 0 0 60px rgba(160,120,80,0.15); font-family: var(--font); direction: rtl; overflow: hidden; }
-    #s6-menu .hd { height: 190px; background: linear-gradient(135deg, #dc2626, #991b1b); display: flex; align-items: center; justify-content: center; gap: 22px; color: #fff; }
+    #s6-menu .hd { height: 190px; background: linear-gradient(135deg, #6B4A3A, #4A3228); display: flex; align-items: center; justify-content: center; gap: 22px; color: #fff; }
     #s6-menu .hd .s6-logo { width: 120px; height: 120px; border: 4px solid #fff; }
     #s6-menu .hd .tt { font-size: 64px; font-weight: 700; }
-    #s6-menu .it { display: flex; align-items: center; gap: 16px; margin: 0 60px; height: 92px; border-bottom: 3px dotted #e7cfc0; font-size: 40px; font-weight: 700; color: #450a0a; }
-    #s6-menu .it .dot { width: 18px; height: 18px; border-radius: 50%; background: #dc2626; flex: none; }
-    #s6-menu .ft { position: absolute; left: 40px; right: 40px; bottom: 36px; display: flex; align-items: center; gap: 26px; padding: 20px; border-radius: 22px; background: #fee2e2; }
+    #s6-menu .it { display: flex; align-items: center; gap: 16px; margin: 0 60px; height: 92px; border-bottom: 3px dotted #e7cfc0; font-size: 40px; font-weight: 700; color: #3B2A22; }
+    #s6-menu .it .dot { width: 18px; height: 18px; border-radius: 50%; background: #8BA888; flex: none; }
+    #s6-menu .ft { position: absolute; left: 40px; right: 40px; bottom: 36px; display: flex; align-items: center; gap: 26px; padding: 20px; border-radius: 22px; background: #E4EBDF; }
     #s6-menu .ft .q { width: 190px; height: 190px; border-radius: 12px; flex: none; }
-    #s6-menu .ft .tx { font-size: 34px; font-weight: 700; color: #450a0a; line-height: 1.4; }
-    #s6-menu .ft .tx small { display: block; font-size: 26px; color: #991b1b; direction: ltr; text-align: right; }
+    #s6-menu .ft .tx { font-size: 34px; font-weight: 700; color: #3B2A22; line-height: 1.4; }
+    #s6-menu .ft .tx small { display: block; font-size: 26px; color: #4A3228; direction: ltr; text-align: right; }
 
     /* ---------- E: business card ---------- */
     #s6-e { background: linear-gradient(160deg, #2b3336, #15191b); }
     #s6-e .sheen { position: absolute; inset: 0; background: radial-gradient(800px 600px at 30% 30%, rgba(255,255,255,0.08), transparent 70%); }
     .s6-bc-wrap { position: absolute; width: 760px; height: 440px; perspective: 1600px; }
     .s6-bc { position: absolute; inset: 0; border-radius: 26px; transform: rotateX(28deg) rotateZ(var(--rz)); box-shadow: 0 50px 70px rgba(0,0,0,0.6); font-family: var(--font); overflow: hidden; }
-    #s6-bc1 .s6-bc { background: linear-gradient(135deg, #dc2626, #7f1d1d); color: #fff; display: flex; align-items: center; justify-content: center; gap: 34px; }
+    #s6-bc1 .s6-bc { background: linear-gradient(135deg, #6B4A3A, #4A3228); color: #fff; display: flex; align-items: center; justify-content: center; gap: 34px; }
     #s6-bc1 .s6-logo { width: 190px; height: 190px; border: 6px solid #fff; }
     #s6-bc1 .nm { font-size: 66px; font-weight: 700; direction: ltr; }
     #s6-bc1 .tg { font-size: 34px; opacity: 0.9; direction: rtl; }
     #s6-bc2 .s6-bc { background: #fff; display: flex; align-items: center; gap: 40px; padding: 0 50px; direction: rtl; }
     #s6-bc2 .q { width: 300px; height: 300px; flex: none; border-radius: 10px; }
-    #s6-bc2 .tx { font-size: 44px; font-weight: 700; color: #450a0a; line-height: 1.35; }
-    #s6-bc2 .tx small { display: block; margin-top: 12px; font-size: 28px; color: #991b1b; direction: ltr; text-align: right; }
+    #s6-bc2 .tx { font-size: 44px; font-weight: 700; color: #3B2A22; line-height: 1.35; }
+    #s6-bc2 .tx small { display: block; margin-top: 12px; font-size: 28px; color: #4A3228; direction: ltr; text-align: right; }
 
     /* ---------- F: takeaway bag ---------- */
     #s6-f { background: linear-gradient(180deg, #f3ece2 0%, #e8dccb 62%, #cdb89c 62.2%, #bca383 100%); }
@@ -117,7 +117,7 @@
     #s6-bag .handle { position: absolute; top: 0; width: 150px; height: 190px; border: 16px solid #a67a4c; border-bottom: none; border-radius: 80px 80px 0 0; }
     #s6-bag .stk1 { position: absolute; left: 130px; top: 300px; width: 200px; height: 200px; border: 6px solid #fff; box-shadow: 0 6px 12px rgba(0,0,0,0.2); }
     #s6-bag .stk2 { position: absolute; left: 90px; top: 560px; width: 280px; padding: 18px; border-radius: 18px; background: #fff; text-align: center; box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-      font-family: var(--font); font-weight: 700; font-size: 26px; color: #450a0a; direction: rtl; }
+      font-family: var(--font); font-weight: 700; font-size: 26px; color: #3B2A22; direction: rtl; }
     #s6-bag .stk2 .q { width: 220px; height: 220px; margin: 0 auto 8px; }
     #s6-bag-shadow { position: absolute; left: 230px; top: 1450px; width: 680px; height: 80px; border-radius: 50%; background: rgba(60,40,20,0.45); filter: blur(20px); }
 
@@ -127,7 +127,7 @@
     #s6-hp .scr { position: relative; width: 100%; height: 100%; border-radius: 52px; overflow: hidden; background: #000; }
     #s6-cam-view { position: absolute; inset: 0; background: radial-gradient(400px 500px at 50% 45%, #6b4024, #2a1a10); }
     #s6-cam-tent { position: absolute; left: 70px; top: 180px; width: 252px; height: 372px; border-radius: 10px; background: #fff; overflow: hidden; }
-    #s6-cam-tent .band { height: 72px; background: linear-gradient(135deg, #dc2626, #991b1b); }
+    #s6-cam-tent .band { height: 72px; background: linear-gradient(135deg, #6B4A3A, #4A3228); }
     #s6-cam-tent .q { width: 180px; height: 180px; margin: 22px auto 0; }
     .s6-vf { position: absolute; width: 60px; height: 60px; border: 8px solid #fff; }
     #s6-vf1 { left: 100px; top: 250px; border-right: none; border-bottom: none; border-radius: 16px 0 0 0; }
@@ -137,7 +137,7 @@
     #s6-found { position: absolute; left: 30px; right: 30px; top: 610px; padding: 16px 10px; border-radius: 22px; background: rgba(255,255,255,0.95); text-align: center; direction: ltr;
       font-family: var(--font); font-weight: 700; font-size: 24px; color: #0b1f1c; }
     #s6-found .ico { color: var(--teal); margin-right: 8px; }
-    #s6-hp-page { position: absolute; inset: 0; background: #fdf2f2; }
+    #s6-hp-page { position: absolute; inset: 0; background: #F6EFE6; }
     #s6-hp-page .page-zoom { zoom: 0.933; width: 420px; }
     .s6-skin { fill: #d9a27a; }
     .s6-skin-d { fill: #c48a62; }
@@ -176,7 +176,7 @@
         <div id="s6-tent">
           <div class="back"></div>
           <div class="front">
-            <div class="band"><div class="s6-logo"></div>Chiken Hut</div>
+            <div class="band"><div class="s6-logo"></div><span dir="rtl">سكّر وهيل</span></div>
             <div class="q s6-qr"></div>
             <div class="cap">امسح الرمز وتواصل معنا</div>
           </div>
@@ -193,22 +193,22 @@
             <div id="s6-cam-view">
               <div id="s6-cam-tent"><div class="band"></div><div class="q s6-qr"></div></div>
               <div id="s6-vf1" class="s6-vf"></div><div id="s6-vf2" class="s6-vf"></div><div id="s6-vf3" class="s6-vf"></div><div id="s6-vf4" class="s6-vf"></div>
-              <div id="s6-found"><i class="ico i-link"></i>linktrees.link/chikenhut</div>
+              <div id="s6-found"><i class="ico i-link"></i>linktrees.link/sukkar-hel</div>
             </div>
             <div id="s6-hp-page">
               <div class="page-zoom">
-                <div class="lp t-chikenhut">
+                <div class="lp t-cafe">
                   <div class="stripes"></div>
-                  <div class="cover fade" style="background-image:url('assets/clients/chikenhut-cover.png')"></div>
-                  <div class="avatar" style="background-image:url('assets/clients/chikenhut-logo.jpg')"></div>
-                  <div class="name ltrname">Chiken Hut</div>
-                  <div><span class="tagline"><i class="ico i-tag"></i>مطعم وجبات سريعة</span></div>
+                  <div class="cover fade" style="background-image:url('assets/brand-cafe/cover.svg')"></div>
+                  <div class="avatar" style="background-image:url('assets/brand-cafe/logo.svg')"></div>
+                  <div class="name">سكّر وهيل</div>
+                  <div><span class="tagline"><i class="ico i-tag"></i>قهوة وحلويات</span></div>
                   <div class="btns">
-                    <div class="btn primary"><div class="t"><i class="ico i-phone"></i>اتصال</div><div class="s ltr">0993354919</div></div>
+                    <div class="btn primary"><div class="t"><i class="ico i-phone"></i>اتصال</div><div class="s ltr">0900 000 000</div></div>
                     <div class="btn"><div class="t"><i class="ico i-user-plus"></i>حفظ</div><div class="s">جهة الاتصال</div></div>
                   </div>
                   <div class="socials"><div class="soc"><i class="ico i-instagram"></i></div><div class="soc"><i class="ico i-facebook-f"></i></div><div class="soc"><i class="ico i-whatsapp"></i></div></div>
-                  <div class="card"><div class="addr"><div class="pin"><i class="ico i-location-dot"></i></div><div><div class="k">العنوان</div><div class="v">حلب-الجميلية-جانب جامع الصديق</div></div></div><div class="mapbtn"><i class="ico i-open"></i>فتح في الخرائط</div></div>
+                  <div class="card"><div class="addr"><div class="pin"><i class="ico i-location-dot"></i></div><div><div class="k">العنوان</div><div class="v">حلب</div></div></div><div class="mapbtn"><i class="ico i-open"></i>فتح في الخرائط</div></div>
                 </div>
               </div>
             </div>
@@ -237,7 +237,7 @@
       <div id="s6-sticker">
         <div class="t1">امسح الرمز</div>
         <div class="q s6-qr"></div>
-        <div class="t2">Chiken Hut</div>
+        <div class="t2" dir="rtl">سكّر وهيل</div>
         <div class="s6-glare"></div>
       </div>
       <div class="s6-handle"></div>
@@ -251,12 +251,12 @@
         <div id="s6-menu">
           <div class="hd"><div class="s6-logo"></div><div class="tt">المنيو</div></div>
           <div style="height:30px"></div>
-          <div class="it"><span class="dot"></span>بروستد</div>
-          <div class="it"><span class="dot"></span>برغر دجاج</div>
-          <div class="it"><span class="dot"></span>كرسبي</div>
-          <div class="it"><span class="dot"></span>بطاطا</div>
-          <div class="it"><span class="dot"></span>مشروبات</div>
-          <div class="ft"><div class="q s6-qr"></div><div class="tx">امسح الرمز<br />وشوف صفحتنا<small>linktrees.link/chikenhut</small></div></div>
+          <div class="it"><span class="dot"></span>قهوة عربية</div>
+          <div class="it"><span class="dot"></span>لاتيه</div>
+          <div class="it"><span class="dot"></span>كرواسون</div>
+          <div class="it"><span class="dot"></span>معمول</div>
+          <div class="it"><span class="dot"></span>كنافة</div>
+          <div class="ft"><div class="q s6-qr"></div><div class="tx">امسح الرمز<br />وشوف صفحتنا<small>linktrees.link/sukkar-hel</small></div></div>
         </div>
       </div>
     </div>
@@ -265,10 +265,10 @@
     <div id="s6-e" class="s6-w">
       <div class="sheen"></div>
       <div id="s6-bc1" class="s6-bc-wrap" style="left:180px;top:560px">
-        <div class="s6-bc" style="--rz:7deg"><div class="s6-logo"></div><div><div class="nm">Chiken Hut</div><div class="tg">مطعم وجبات سريعة</div></div></div>
+        <div class="s6-bc" style="--rz:7deg"><div class="s6-logo"></div><div><div class="nm" dir="rtl">سكّر وهيل</div><div class="tg">قهوة وحلويات</div></div></div>
       </div>
       <div id="s6-bc2" class="s6-bc-wrap" style="left:140px;top:1000px">
-        <div class="s6-bc" style="--rz:-5deg"><div class="q s6-qr"></div><div class="tx">امسح الرمز<br />كل طرق التواصل<small>linktrees.link/chikenhut</small></div></div>
+        <div class="s6-bc" style="--rz:-5deg"><div class="q s6-qr"></div><div class="tx">امسح الرمز<br />كل طرق التواصل<small>linktrees.link/sukkar-hel</small></div></div>
       </div>
     </div>
 
@@ -393,339 +393,337 @@
 <rect class="qf" x="28" y="0" width="1.02" height="1.02"/>
 <rect class="qm" x="13" y="14" width="1.02" height="1.02"/>
 <rect class="qm" x="14" y="13" width="1.02" height="1.02"/>
-<rect class="qm" x="14" y="15" width="1.02" height="1.02"/>
-<rect class="qm" x="15" y="14" width="1.02" height="1.02"/>
+<rect class="qm" x="15" y="13" width="1.02" height="1.02"/>
+<rect class="qm" x="15" y="15" width="1.02" height="1.02"/>
 <rect class="qm" x="14" y="12" width="1.02" height="1.02"/>
-<rect class="qm" x="14" y="16" width="1.02" height="1.02"/>
-<rect class="qm" x="16" y="14" width="1.02" height="1.02"/>
+<rect class="qm" x="12" y="13" width="1.02" height="1.02"/>
+<rect class="qm" x="12" y="15" width="1.02" height="1.02"/>
 <rect class="qm" x="15" y="12" width="1.02" height="1.02"/>
-<rect class="qm" x="15" y="16" width="1.02" height="1.02"/>
-<rect class="qm" x="16" y="13" width="1.02" height="1.02"/>
-<rect class="qm" x="16" y="15" width="1.02" height="1.02"/>
+<rect class="qm" x="12" y="12" width="1.02" height="1.02"/>
 <rect class="qm" x="12" y="16" width="1.02" height="1.02"/>
-<rect class="qm" x="11" y="14" width="1.02" height="1.02"/>
-<rect class="qm" x="14" y="17" width="1.02" height="1.02"/>
-<rect class="qm" x="11" y="15" width="1.02" height="1.02"/>
+<rect class="qm" x="16" y="16" width="1.02" height="1.02"/>
+<rect class="qm" x="14" y="11" width="1.02" height="1.02"/>
+<rect class="qm" x="17" y="14" width="1.02" height="1.02"/>
+<rect class="qm" x="13" y="11" width="1.02" height="1.02"/>
+<rect class="qm" x="13" y="17" width="1.02" height="1.02"/>
+<rect class="qm" x="15" y="17" width="1.02" height="1.02"/>
 <rect class="qm" x="11" y="16" width="1.02" height="1.02"/>
-<rect class="qm" x="12" y="11" width="1.02" height="1.02"/>
 <rect class="qm" x="12" y="17" width="1.02" height="1.02"/>
 <rect class="qm" x="16" y="11" width="1.02" height="1.02"/>
 <rect class="qm" x="16" y="17" width="1.02" height="1.02"/>
-<rect class="qm" x="17" y="12" width="1.02" height="1.02"/>
 <rect class="qm" x="10" y="14" width="1.02" height="1.02"/>
+<rect class="qm" x="14" y="10" width="1.02" height="1.02"/>
 <rect class="qm" x="14" y="18" width="1.02" height="1.02"/>
-<rect class="qm" x="13" y="10" width="1.02" height="1.02"/>
-<rect class="qm" x="13" y="18" width="1.02" height="1.02"/>
+<rect class="qm" x="10" y="15" width="1.02" height="1.02"/>
+<rect class="qm" x="15" y="10" width="1.02" height="1.02"/>
 <rect class="qm" x="15" y="18" width="1.02" height="1.02"/>
+<rect class="qm" x="18" y="13" width="1.02" height="1.02"/>
+<rect class="qm" x="11" y="11" width="1.02" height="1.02"/>
+<rect class="qm" x="17" y="11" width="1.02" height="1.02"/>
 <rect class="qm" x="17" y="17" width="1.02" height="1.02"/>
-<rect class="qm" x="10" y="12" width="1.02" height="1.02"/>
 <rect class="qm" x="16" y="10" width="1.02" height="1.02"/>
-<rect class="qm" x="18" y="16" width="1.02" height="1.02"/>
+<rect class="qm" x="16" y="18" width="1.02" height="1.02"/>
+<rect class="qm" x="18" y="12" width="1.02" height="1.02"/>
+<rect class="qm" x="9" y="14" width="1.02" height="1.02"/>
 <rect class="qm" x="10" y="11" width="1.02" height="1.02"/>
-<rect class="qm" x="10" y="17" width="1.02" height="1.02"/>
 <rect class="qm" x="11" y="10" width="1.02" height="1.02"/>
-<rect class="qm" x="11" y="18" width="1.02" height="1.02"/>
-<rect class="qm" x="14" y="9" width="1.02" height="1.02"/>
 <rect class="qm" x="14" y="19" width="1.02" height="1.02"/>
-<rect class="qm" x="17" y="10" width="1.02" height="1.02"/>
-<rect class="qm" x="17" y="18" width="1.02" height="1.02"/>
-<rect class="qm" x="19" y="14" width="1.02" height="1.02"/>
-<rect class="qm" x="9" y="13" width="1.02" height="1.02"/>
+<rect class="qm" x="18" y="11" width="1.02" height="1.02"/>
 <rect class="qm" x="9" y="15" width="1.02" height="1.02"/>
 <rect class="qm" x="13" y="9" width="1.02" height="1.02"/>
 <rect class="qm" x="13" y="19" width="1.02" height="1.02"/>
 <rect class="qm" x="15" y="9" width="1.02" height="1.02"/>
-<rect class="qm" x="19" y="13" width="1.02" height="1.02"/>
-<rect class="qm" x="9" y="16" width="1.02" height="1.02"/>
+<rect class="qm" x="19" y="15" width="1.02" height="1.02"/>
+<rect class="qm" x="9" y="12" width="1.02" height="1.02"/>
+<rect class="qm" x="12" y="9" width="1.02" height="1.02"/>
 <rect class="qm" x="12" y="19" width="1.02" height="1.02"/>
+<rect class="qm" x="16" y="9" width="1.02" height="1.02"/>
 <rect class="qm" x="16" y="19" width="1.02" height="1.02"/>
 <rect class="qm" x="19" y="12" width="1.02" height="1.02"/>
 <rect class="qm" x="19" y="16" width="1.02" height="1.02"/>
+<rect class="qm" x="18" y="10" width="1.02" height="1.02"/>
 <rect class="qm" x="18" y="18" width="1.02" height="1.02"/>
 <rect class="qm" x="9" y="11" width="1.02" height="1.02"/>
+<rect class="qm" x="11" y="19" width="1.02" height="1.02"/>
 <rect class="qm" x="17" y="9" width="1.02" height="1.02"/>
 <rect class="qm" x="17" y="19" width="1.02" height="1.02"/>
 <rect class="qm" x="19" y="11" width="1.02" height="1.02"/>
 <rect class="qm" x="14" y="20" width="1.02" height="1.02"/>
-<rect class="qm" x="13" y="8" width="1.02" height="1.02"/>
-<rect class="qm" x="13" y="20" width="1.02" height="1.02"/>
-<rect class="qm" x="15" y="8" width="1.02" height="1.02"/>
+<rect class="qm" x="20" y="14" width="1.02" height="1.02"/>
+<rect class="qm" x="8" y="13" width="1.02" height="1.02"/>
+<rect class="qm" x="8" y="15" width="1.02" height="1.02"/>
+<rect class="qm" x="15" y="20" width="1.02" height="1.02"/>
+<rect class="qm" x="20" y="13" width="1.02" height="1.02"/>
 <rect class="qm" x="20" y="15" width="1.02" height="1.02"/>
-<rect class="qm" x="8" y="12" width="1.02" height="1.02"/>
-<rect class="qm" x="12" y="8" width="1.02" height="1.02"/>
+<rect class="qm" x="8" y="16" width="1.02" height="1.02"/>
+<rect class="qm" x="12" y="20" width="1.02" height="1.02"/>
+<rect class="qm" x="16" y="8" width="1.02" height="1.02"/>
+<rect class="qm" x="20" y="12" width="1.02" height="1.02"/>
 <rect class="qm" x="20" y="16" width="1.02" height="1.02"/>
 <rect class="qm" x="9" y="10" width="1.02" height="1.02"/>
-<rect class="qm" x="18" y="9" width="1.02" height="1.02"/>
+<rect class="qm" x="10" y="9" width="1.02" height="1.02"/>
+<rect class="qm" x="10" y="19" width="1.02" height="1.02"/>
 <rect class="qm" x="18" y="19" width="1.02" height="1.02"/>
-<rect class="qm" x="8" y="17" width="1.02" height="1.02"/>
 <rect class="qm" x="11" y="20" width="1.02" height="1.02"/>
-<rect class="qm" x="17" y="8" width="1.02" height="1.02"/>
-<rect class="qm" x="17" y="20" width="1.02" height="1.02"/>
 <rect class="qm" x="20" y="17" width="1.02" height="1.02"/>
-<rect class="qm" x="7" y="13" width="1.02" height="1.02"/>
-<rect class="qm" x="7" y="15" width="1.02" height="1.02"/>
+<rect class="qm" x="7" y="14" width="1.02" height="1.02"/>
+<rect class="qm" x="14" y="21" width="1.02" height="1.02"/>
 <rect class="qm" x="9" y="9" width="1.02" height="1.02"/>
+<rect class="qm" x="9" y="19" width="1.02" height="1.02"/>
 <rect class="qm" x="15" y="7" width="1.02" height="1.02"/>
-<rect class="qm" x="19" y="9" width="1.02" height="1.02"/>
-<rect class="qm" x="19" y="19" width="1.02" height="1.02"/>
-<rect class="qm" x="21" y="13" width="1.02" height="1.02"/>
+<rect class="qm" x="15" y="21" width="1.02" height="1.02"/>
 <rect class="qm" x="21" y="15" width="1.02" height="1.02"/>
-<rect class="qm" x="8" y="18" width="1.02" height="1.02"/>
-<rect class="qm" x="10" y="8" width="1.02" height="1.02"/>
-<rect class="qm" x="10" y="20" width="1.02" height="1.02"/>
-<rect class="qm" x="18" y="8" width="1.02" height="1.02"/>
 <rect class="qm" x="18" y="20" width="1.02" height="1.02"/>
-<rect class="qm" x="12" y="7" width="1.02" height="1.02"/>
-<rect class="qm" x="16" y="7" width="1.02" height="1.02"/>
-<rect class="qm" x="16" y="21" width="1.02" height="1.02"/>
+<rect class="qm" x="20" y="18" width="1.02" height="1.02"/>
+<rect class="qm" x="7" y="12" width="1.02" height="1.02"/>
+<rect class="qm" x="12" y="21" width="1.02" height="1.02"/>
+<rect class="qm" x="21" y="12" width="1.02" height="1.02"/>
 <rect class="qm" x="21" y="16" width="1.02" height="1.02"/>
-<rect class="qm" x="7" y="17" width="1.02" height="1.02"/>
 <rect class="qm" x="11" y="7" width="1.02" height="1.02"/>
-<rect class="qm" x="17" y="7" width="1.02" height="1.02"/>
+<rect class="qm" x="11" y="21" width="1.02" height="1.02"/>
+<rect class="qm" x="21" y="11" width="1.02" height="1.02"/>
+<rect class="qm" x="21" y="17" width="1.02" height="1.02"/>
 <rect class="qm" x="8" y="9" width="1.02" height="1.02"/>
 <rect class="qm" x="8" y="19" width="1.02" height="1.02"/>
+<rect class="qm" x="9" y="20" width="1.02" height="1.02"/>
+<rect class="qm" x="19" y="8" width="1.02" height="1.02"/>
+<rect class="qm" x="19" y="20" width="1.02" height="1.02"/>
 <rect class="qm" x="20" y="9" width="1.02" height="1.02"/>
+<rect class="qm" x="20" y="19" width="1.02" height="1.02"/>
 <rect class="qm" x="6" y="14" width="1.02" height="1.02"/>
 <rect class="qm" x="14" y="6" width="1.02" height="1.02"/>
-<rect class="qm" x="14" y="22" width="1.02" height="1.02"/>
 <rect class="qm" x="22" y="14" width="1.02" height="1.02"/>
-<rect class="qm" x="18" y="7" width="1.02" height="1.02"/>
+<rect class="qm" x="10" y="21" width="1.02" height="1.02"/>
+<rect class="qm" x="13" y="22" width="1.02" height="1.02"/>
 <rect class="qm" x="18" y="21" width="1.02" height="1.02"/>
 <rect class="qm" x="21" y="10" width="1.02" height="1.02"/>
+<rect class="qm" x="21" y="18" width="1.02" height="1.02"/>
 <rect class="qm" x="22" y="13" width="1.02" height="1.02"/>
 <rect class="qm" x="22" y="15" width="1.02" height="1.02"/>
 <rect class="qm" x="6" y="12" width="1.02" height="1.02"/>
 <rect class="qm" x="6" y="16" width="1.02" height="1.02"/>
 <rect class="qm" x="12" y="6" width="1.02" height="1.02"/>
-<rect class="qm" x="12" y="22" width="1.02" height="1.02"/>
 <rect class="qm" x="16" y="6" width="1.02" height="1.02"/>
-<rect class="qm" x="16" y="22" width="1.02" height="1.02"/>
-<rect class="qm" x="8" y="20" width="1.02" height="1.02"/>
+<rect class="qm" x="22" y="12" width="1.02" height="1.02"/>
+<rect class="qm" x="22" y="16" width="1.02" height="1.02"/>
+<rect class="qm" x="20" y="8" width="1.02" height="1.02"/>
 <rect class="qm" x="20" y="20" width="1.02" height="1.02"/>
 <rect class="qm" x="11" y="22" width="1.02" height="1.02"/>
 <rect class="qm" x="17" y="22" width="1.02" height="1.02"/>
-<rect class="qm" x="22" y="11" width="1.02" height="1.02"/>
+<rect class="qm" x="22" y="17" width="1.02" height="1.02"/>
 <rect class="qm" x="7" y="9" width="1.02" height="1.02"/>
-<rect class="qm" x="7" y="19" width="1.02" height="1.02"/>
 <rect class="qm" x="9" y="7" width="1.02" height="1.02"/>
 <rect class="qm" x="9" y="21" width="1.02" height="1.02"/>
-<rect class="qm" x="19" y="7" width="1.02" height="1.02"/>
-<rect class="qm" x="21" y="19" width="1.02" height="1.02"/>
+<rect class="qm" x="19" y="21" width="1.02" height="1.02"/>
 <rect class="qm" x="6" y="10" width="1.02" height="1.02"/>
 <rect class="qm" x="6" y="18" width="1.02" height="1.02"/>
 <rect class="qm" x="10" y="6" width="1.02" height="1.02"/>
 <rect class="qm" x="18" y="6" width="1.02" height="1.02"/>
-<rect class="qm" x="18" y="22" width="1.02" height="1.02"/>
+<rect class="qm" x="22" y="10" width="1.02" height="1.02"/>
+<rect class="qm" x="22" y="18" width="1.02" height="1.02"/>
 <rect class="qm" x="5" y="14" width="1.02" height="1.02"/>
-<rect class="qm" x="14" y="23" width="1.02" height="1.02"/>
-<rect class="qm" x="5" y="15" width="1.02" height="1.02"/>
-<rect class="qm" x="13" y="5" width="1.02" height="1.02"/>
-<rect class="qm" x="13" y="23" width="1.02" height="1.02"/>
+<rect class="qm" x="14" y="5" width="1.02" height="1.02"/>
+<rect class="qm" x="5" y="13" width="1.02" height="1.02"/>
 <rect class="qm" x="15" y="5" width="1.02" height="1.02"/>
-<rect class="qm" x="23" y="15" width="1.02" height="1.02"/>
-<rect class="qm" x="5" y="12" width="1.02" height="1.02"/>
-<rect class="qm" x="7" y="8" width="1.02" height="1.02"/>
-<rect class="qm" x="7" y="20" width="1.02" height="1.02"/>
-<rect class="qm" x="8" y="7" width="1.02" height="1.02"/>
+<rect class="qm" x="15" y="23" width="1.02" height="1.02"/>
 <rect class="qm" x="8" y="21" width="1.02" height="1.02"/>
-<rect class="qm" x="12" y="5" width="1.02" height="1.02"/>
-<rect class="qm" x="12" y="23" width="1.02" height="1.02"/>
 <rect class="qm" x="16" y="5" width="1.02" height="1.02"/>
+<rect class="qm" x="20" y="7" width="1.02" height="1.02"/>
 <rect class="qm" x="20" y="21" width="1.02" height="1.02"/>
 <rect class="qm" x="21" y="20" width="1.02" height="1.02"/>
-<rect class="qm" x="23" y="16" width="1.02" height="1.02"/>
-<rect class="qm" x="9" y="22" width="1.02" height="1.02"/>
 <rect class="qm" x="19" y="22" width="1.02" height="1.02"/>
 <rect class="qm" x="22" y="9" width="1.02" height="1.02"/>
-<rect class="qm" x="17" y="5" width="1.02" height="1.02"/>
-<rect class="qm" x="23" y="17" width="1.02" height="1.02"/>
-<rect class="qm" x="5" y="10" width="1.02" height="1.02"/>
-<rect class="qm" x="18" y="23" width="1.02" height="1.02"/>
+<rect class="qm" x="5" y="17" width="1.02" height="1.02"/>
+<rect class="qm" x="11" y="5" width="1.02" height="1.02"/>
+<rect class="qm" x="11" y="23" width="1.02" height="1.02"/>
+<rect class="qm" x="23" y="11" width="1.02" height="1.02"/>
+<rect class="qm" x="10" y="5" width="1.02" height="1.02"/>
+<rect class="qm" x="10" y="23" width="1.02" height="1.02"/>
+<rect class="qm" x="18" y="5" width="1.02" height="1.02"/>
+<rect class="qm" x="23" y="10" width="1.02" height="1.02"/>
 <rect class="qm" x="23" y="18" width="1.02" height="1.02"/>
+<rect class="qm" x="4" y="14" width="1.02" height="1.02"/>
 <rect class="qm" x="6" y="8" width="1.02" height="1.02"/>
 <rect class="qm" x="6" y="20" width="1.02" height="1.02"/>
 <rect class="qm" x="8" y="6" width="1.02" height="1.02"/>
-<rect class="qm" x="8" y="22" width="1.02" height="1.02"/>
-<rect class="qm" x="14" y="4" width="1.02" height="1.02"/>
 <rect class="qm" x="20" y="6" width="1.02" height="1.02"/>
 <rect class="qm" x="20" y="22" width="1.02" height="1.02"/>
-<rect class="qm" x="22" y="8" width="1.02" height="1.02"/>
 <rect class="qm" x="22" y="20" width="1.02" height="1.02"/>
-<rect class="qm" x="24" y="14" width="1.02" height="1.02"/>
-<rect class="qm" x="4" y="13" width="1.02" height="1.02"/>
-<rect class="qm" x="4" y="15" width="1.02" height="1.02"/>
-<rect class="qm" x="15" y="24" width="1.02" height="1.02"/>
+<rect class="qm" x="13" y="4" width="1.02" height="1.02"/>
+<rect class="qm" x="24" y="15" width="1.02" height="1.02"/>
 <rect class="qm" x="12" y="24" width="1.02" height="1.02"/>
 <rect class="qm" x="16" y="4" width="1.02" height="1.02"/>
 <rect class="qm" x="16" y="24" width="1.02" height="1.02"/>
-<rect class="qm" x="24" y="16" width="1.02" height="1.02"/>
-<rect class="qm" x="9" y="5" width="1.02" height="1.02"/>
-<rect class="qm" x="9" y="23" width="1.02" height="1.02"/>
+<rect class="qm" x="5" y="19" width="1.02" height="1.02"/>
 <rect class="qm" x="19" y="5" width="1.02" height="1.02"/>
 <rect class="qm" x="19" y="23" width="1.02" height="1.02"/>
-<rect class="qm" x="23" y="9" width="1.02" height="1.02"/>
 <rect class="qm" x="23" y="19" width="1.02" height="1.02"/>
 <rect class="qm" x="4" y="11" width="1.02" height="1.02"/>
-<rect class="qm" x="4" y="17" width="1.02" height="1.02"/>
+<rect class="qm" x="11" y="4" width="1.02" height="1.02"/>
 <rect class="qm" x="17" y="4" width="1.02" height="1.02"/>
-<rect class="qm" x="17" y="24" width="1.02" height="1.02"/>
 <rect class="qm" x="24" y="11" width="1.02" height="1.02"/>
-<rect class="qm" x="24" y="10" width="1.02" height="1.02"/>
+<rect class="qm" x="4" y="10" width="1.02" height="1.02"/>
+<rect class="qm" x="10" y="4" width="1.02" height="1.02"/>
+<rect class="qm" x="10" y="24" width="1.02" height="1.02"/>
+<rect class="qm" x="18" y="4" width="1.02" height="1.02"/>
 <rect class="qm" x="24" y="18" width="1.02" height="1.02"/>
-<rect class="qm" x="5" y="8" width="1.02" height="1.02"/>
-<rect class="qm" x="5" y="20" width="1.02" height="1.02"/>
-<rect class="qm" x="8" y="23" width="1.02" height="1.02"/>
 <rect class="qm" x="20" y="23" width="1.02" height="1.02"/>
 <rect class="qm" x="23" y="20" width="1.02" height="1.02"/>
-<rect class="qm" x="14" y="3" width="1.02" height="1.02"/>
-<rect class="qm" x="3" y="13" width="1.02" height="1.02"/>
-<rect class="qm" x="3" y="15" width="1.02" height="1.02"/>
-<rect class="qm" x="13" y="25" width="1.02" height="1.02"/>
-<rect class="qm" x="15" y="3" width="1.02" height="1.02"/>
+<rect class="qm" x="25" y="14" width="1.02" height="1.02"/>
+<rect class="qm" x="13" y="3" width="1.02" height="1.02"/>
 <rect class="qm" x="15" y="25" width="1.02" height="1.02"/>
+<rect class="qm" x="25" y="13" width="1.02" height="1.02"/>
+<rect class="qm" x="25" y="15" width="1.02" height="1.02"/>
 <rect class="qm" x="3" y="12" width="1.02" height="1.02"/>
+<rect class="qm" x="3" y="16" width="1.02" height="1.02"/>
 <rect class="qm" x="4" y="9" width="1.02" height="1.02"/>
 <rect class="qm" x="4" y="19" width="1.02" height="1.02"/>
-<rect class="qm" x="9" y="4" width="1.02" height="1.02"/>
 <rect class="qm" x="9" y="24" width="1.02" height="1.02"/>
-<rect class="qm" x="12" y="3" width="1.02" height="1.02"/>
+<rect class="qm" x="16" y="3" width="1.02" height="1.02"/>
 <rect class="qm" x="16" y="25" width="1.02" height="1.02"/>
 <rect class="qm" x="19" y="4" width="1.02" height="1.02"/>
-<rect class="qm" x="24" y="9" width="1.02" height="1.02"/>
 <rect class="qm" x="24" y="19" width="1.02" height="1.02"/>
 <rect class="qm" x="25" y="12" width="1.02" height="1.02"/>
 <rect class="qm" x="25" y="16" width="1.02" height="1.02"/>
 <rect class="qm" x="22" y="22" width="1.02" height="1.02"/>
 <rect class="qm" x="3" y="11" width="1.02" height="1.02"/>
+<rect class="qm" x="11" y="3" width="1.02" height="1.02"/>
 <rect class="qm" x="11" y="25" width="1.02" height="1.02"/>
 <rect class="qm" x="17" y="3" width="1.02" height="1.02"/>
+<rect class="qm" x="17" y="25" width="1.02" height="1.02"/>
 <rect class="qm" x="25" y="17" width="1.02" height="1.02"/>
-<rect class="qm" x="4" y="20" width="1.02" height="1.02"/>
+<rect class="qm" x="4" y="8" width="1.02" height="1.02"/>
+<rect class="qm" x="8" y="4" width="1.02" height="1.02"/>
+<rect class="qm" x="8" y="24" width="1.02" height="1.02"/>
 <rect class="qm" x="20" y="24" width="1.02" height="1.02"/>
+<rect class="qm" x="24" y="8" width="1.02" height="1.02"/>
 <rect class="qm" x="24" y="20" width="1.02" height="1.02"/>
-<rect class="qm" x="3" y="18" width="1.02" height="1.02"/>
-<rect class="qm" x="26" y="14" width="1.02" height="1.02"/>
+<rect class="qm" x="10" y="3" width="1.02" height="1.02"/>
+<rect class="qm" x="2" y="14" width="1.02" height="1.02"/>
+<rect class="qm" x="14" y="26" width="1.02" height="1.02"/>
 <rect class="qm" x="2" y="13" width="1.02" height="1.02"/>
-<rect class="qm" x="2" y="15" width="1.02" height="1.02"/>
-<rect class="qm" x="26" y="13" width="1.02" height="1.02"/>
-<rect class="qm" x="9" y="3" width="1.02" height="1.02"/>
-<rect class="qm" x="9" y="25" width="1.02" height="1.02"/>
-<rect class="qm" x="19" y="3" width="1.02" height="1.02"/>
-<rect class="qm" x="19" y="25" width="1.02" height="1.02"/>
+<rect class="qm" x="13" y="26" width="1.02" height="1.02"/>
+<rect class="qm" x="15" y="2" width="1.02" height="1.02"/>
+<rect class="qm" x="15" y="26" width="1.02" height="1.02"/>
+<rect class="qm" x="25" y="9" width="1.02" height="1.02"/>
+<rect class="qm" x="25" y="19" width="1.02" height="1.02"/>
+<rect class="qm" x="2" y="12" width="1.02" height="1.02"/>
+<rect class="qm" x="2" y="16" width="1.02" height="1.02"/>
 <rect class="qm" x="12" y="2" width="1.02" height="1.02"/>
 <rect class="qm" x="12" y="26" width="1.02" height="1.02"/>
-<rect class="qm" x="16" y="2" width="1.02" height="1.02"/>
 <rect class="qm" x="16" y="26" width="1.02" height="1.02"/>
-<rect class="qm" x="26" y="12" width="1.02" height="1.02"/>
 <rect class="qm" x="21" y="24" width="1.02" height="1.02"/>
 <rect class="qm" x="24" y="21" width="1.02" height="1.02"/>
-<rect class="qm" x="2" y="17" width="1.02" height="1.02"/>
-<rect class="qm" x="11" y="2" width="1.02" height="1.02"/>
-<rect class="qm" x="11" y="26" width="1.02" height="1.02"/>
-<rect class="qm" x="17" y="26" width="1.02" height="1.02"/>
+<rect class="qm" x="2" y="11" width="1.02" height="1.02"/>
 <rect class="qm" x="26" y="17" width="1.02" height="1.02"/>
-<rect class="qm" x="3" y="8" width="1.02" height="1.02"/>
-<rect class="qm" x="8" y="3" width="1.02" height="1.02"/>
-<rect class="qm" x="8" y="25" width="1.02" height="1.02"/>
-<rect class="qm" x="25" y="8" width="1.02" height="1.02"/>
-<rect class="qm" x="25" y="20" width="1.02" height="1.02"/>
+<rect class="qm" x="3" y="20" width="1.02" height="1.02"/>
+<rect class="qm" x="20" y="25" width="1.02" height="1.02"/>
 <rect class="qm" x="2" y="10" width="1.02" height="1.02"/>
 <rect class="qm" x="2" y="18" width="1.02" height="1.02"/>
 <rect class="qm" x="10" y="2" width="1.02" height="1.02"/>
-<rect class="qm" x="10" y="26" width="1.02" height="1.02"/>
 <rect class="qm" x="18" y="2" width="1.02" height="1.02"/>
 <rect class="qm" x="18" y="26" width="1.02" height="1.02"/>
 <rect class="qm" x="26" y="10" width="1.02" height="1.02"/>
-<rect class="qm" x="26" y="18" width="1.02" height="1.02"/>
 <rect class="qm" x="22" y="24" width="1.02" height="1.02"/>
 <rect class="qm" x="24" y="22" width="1.02" height="1.02"/>
-<rect class="qm" x="2" y="9" width="1.02" height="1.02"/>
 <rect class="qm" x="2" y="19" width="1.02" height="1.02"/>
 <rect class="qm" x="9" y="26" width="1.02" height="1.02"/>
 <rect class="qm" x="14" y="27" width="1.02" height="1.02"/>
-<rect class="qm" x="19" y="26" width="1.02" height="1.02"/>
-<rect class="qm" x="26" y="19" width="1.02" height="1.02"/>
+<rect class="qm" x="19" y="2" width="1.02" height="1.02"/>
 <rect class="qm" x="27" y="14" width="1.02" height="1.02"/>
-<rect class="qm" x="1" y="13" width="1.02" height="1.02"/>
+<rect class="qm" x="1" y="15" width="1.02" height="1.02"/>
 <rect class="qm" x="13" y="1" width="1.02" height="1.02"/>
-<rect class="qm" x="15" y="27" width="1.02" height="1.02"/>
-<rect class="qm" x="21" y="25" width="1.02" height="1.02"/>
-<rect class="qm" x="25" y="21" width="1.02" height="1.02"/>
-<rect class="qm" x="27" y="13" width="1.02" height="1.02"/>
+<rect class="qm" x="13" y="27" width="1.02" height="1.02"/>
 <rect class="qm" x="27" y="15" width="1.02" height="1.02"/>
-<rect class="qm" x="1" y="16" width="1.02" height="1.02"/>
-<rect class="qm" x="16" y="1" width="1.02" height="1.02"/>
+<rect class="qm" x="12" y="27" width="1.02" height="1.02"/>
+<rect class="qm" x="16" y="27" width="1.02" height="1.02"/>
+<rect class="qm" x="27" y="12" width="1.02" height="1.02"/>
 <rect class="qm" x="27" y="16" width="1.02" height="1.02"/>
 <rect class="qm" x="1" y="11" width="1.02" height="1.02"/>
-<rect class="qm" x="27" y="17" width="1.02" height="1.02"/>
+<rect class="qm" x="1" y="17" width="1.02" height="1.02"/>
+<rect class="qm" x="11" y="27" width="1.02" height="1.02"/>
+<rect class="qm" x="17" y="1" width="1.02" height="1.02"/>
+<rect class="qm" x="17" y="27" width="1.02" height="1.02"/>
+<rect class="qm" x="27" y="11" width="1.02" height="1.02"/>
 <rect class="qm" x="2" y="8" width="1.02" height="1.02"/>
-<rect class="qm" x="2" y="20" width="1.02" height="1.02"/>
 <rect class="qm" x="8" y="26" width="1.02" height="1.02"/>
-<rect class="qm" x="26" y="20" width="1.02" height="1.02"/>
+<rect class="qm" x="20" y="2" width="1.02" height="1.02"/>
+<rect class="qm" x="20" y="26" width="1.02" height="1.02"/>
 <rect class="qm" x="23" y="24" width="1.02" height="1.02"/>
 <rect class="qm" x="24" y="23" width="1.02" height="1.02"/>
+<rect class="qm" x="1" y="10" width="1.02" height="1.02"/>
 <rect class="qm" x="10" y="27" width="1.02" height="1.02"/>
-<rect class="qm" x="18" y="1" width="1.02" height="1.02"/>
 <rect class="qm" x="18" y="27" width="1.02" height="1.02"/>
 <rect class="qm" x="25" y="22" width="1.02" height="1.02"/>
 <rect class="qm" x="27" y="10" width="1.02" height="1.02"/>
+<rect class="qm" x="27" y="18" width="1.02" height="1.02"/>
 <rect class="qm" x="26" y="21" width="1.02" height="1.02"/>
+<rect class="qm" x="1" y="19" width="1.02" height="1.02"/>
+<rect class="qm" x="9" y="1" width="1.02" height="1.02"/>
 <rect class="qm" x="9" y="27" width="1.02" height="1.02"/>
-<rect class="qm" x="19" y="27" width="1.02" height="1.02"/>
+<rect class="qm" x="19" y="1" width="1.02" height="1.02"/>
+<rect class="qm" x="27" y="19" width="1.02" height="1.02"/>
+<rect class="qm" x="0" y="14" width="1.02" height="1.02"/>
 <rect class="qm" x="14" y="0" width="1.02" height="1.02"/>
 <rect class="qm" x="28" y="14" width="1.02" height="1.02"/>
-<rect class="qm" x="13" y="0" width="1.02" height="1.02"/>
-<rect class="qm" x="15" y="0" width="1.02" height="1.02"/>
+<rect class="qm" x="0" y="13" width="1.02" height="1.02"/>
+<rect class="qm" x="0" y="15" width="1.02" height="1.02"/>
+<rect class="qm" x="13" y="28" width="1.02" height="1.02"/>
 <rect class="qm" x="15" y="28" width="1.02" height="1.02"/>
 <rect class="qm" x="28" y="13" width="1.02" height="1.02"/>
-<rect class="qm" x="0" y="16" width="1.02" height="1.02"/>
+<rect class="qm" x="0" y="12" width="1.02" height="1.02"/>
 <rect class="qm" x="12" y="0" width="1.02" height="1.02"/>
 <rect class="qm" x="24" y="24" width="1.02" height="1.02"/>
+<rect class="qm" x="28" y="12" width="1.02" height="1.02"/>
+<rect class="qm" x="28" y="16" width="1.02" height="1.02"/>
 <rect class="qm" x="23" y="25" width="1.02" height="1.02"/>
 <rect class="qm" x="25" y="23" width="1.02" height="1.02"/>
-<rect class="qm" x="0" y="11" width="1.02" height="1.02"/>
-<rect class="qm" x="1" y="20" width="1.02" height="1.02"/>
 <rect class="qm" x="8" y="1" width="1.02" height="1.02"/>
 <rect class="qm" x="11" y="28" width="1.02" height="1.02"/>
-<rect class="qm" x="17" y="0" width="1.02" height="1.02"/>
+<rect class="qm" x="20" y="1" width="1.02" height="1.02"/>
 <rect class="qm" x="20" y="27" width="1.02" height="1.02"/>
 <rect class="qm" x="27" y="8" width="1.02" height="1.02"/>
-<rect class="qm" x="28" y="11" width="1.02" height="1.02"/>
+<rect class="qm" x="28" y="17" width="1.02" height="1.02"/>
+<rect class="qm" x="0" y="10" width="1.02" height="1.02"/>
 <rect class="qm" x="0" y="18" width="1.02" height="1.02"/>
+<rect class="qm" x="10" y="0" width="1.02" height="1.02"/>
+<rect class="qm" x="10" y="28" width="1.02" height="1.02"/>
 <rect class="qm" x="18" y="0" width="1.02" height="1.02"/>
 <rect class="qm" x="18" y="28" width="1.02" height="1.02"/>
+<rect class="qm" x="28" y="10" width="1.02" height="1.02"/>
+<rect class="qm" x="28" y="18" width="1.02" height="1.02"/>
 <rect class="qm" x="27" y="21" width="1.02" height="1.02"/>
-<rect class="qm" x="9" y="0" width="1.02" height="1.02"/>
-<rect class="qm" x="9" y="28" width="1.02" height="1.02"/>
-<rect class="qm" x="19" y="0" width="1.02" height="1.02"/>
 <rect class="qm" x="19" y="28" width="1.02" height="1.02"/>
 <rect class="qm" x="24" y="25" width="1.02" height="1.02"/>
 <rect class="qm" x="28" y="9" width="1.02" height="1.02"/>
 <rect class="qm" x="23" y="26" width="1.02" height="1.02"/>
 <rect class="qm" x="0" y="8" width="1.02" height="1.02"/>
-<rect class="qm" x="8" y="0" width="1.02" height="1.02"/>
+<rect class="qm" x="0" y="20" width="1.02" height="1.02"/>
 <rect class="qm" x="8" y="28" width="1.02" height="1.02"/>
+<rect class="qm" x="20" y="0" width="1.02" height="1.02"/>
 <rect class="qm" x="20" y="28" width="1.02" height="1.02"/>
-<rect class="qm" x="28" y="8" width="1.02" height="1.02"/>
 <rect class="qm" x="27" y="22" width="1.02" height="1.02"/>
-<rect class="qm" x="25" y="25" width="1.02" height="1.02"/>
-<rect class="qm" x="26" y="24" width="1.02" height="1.02"/>
+<rect class="qm" x="24" y="26" width="1.02" height="1.02"/>
 <rect class="qm" x="21" y="28" width="1.02" height="1.02"/>
 <rect class="qm" x="28" y="21" width="1.02" height="1.02"/>
-<rect class="qm" x="24" y="27" width="1.02" height="1.02"/>
+<rect class="qm" x="23" y="27" width="1.02" height="1.02"/>
+<rect class="qm" x="27" y="23" width="1.02" height="1.02"/>
+<rect class="qm" x="22" y="28" width="1.02" height="1.02"/>
+<rect class="qm" x="28" y="22" width="1.02" height="1.02"/>
+<rect class="qm" x="25" y="26" width="1.02" height="1.02"/>
+<rect class="qm" x="26" y="25" width="1.02" height="1.02"/>
 <rect class="qm" x="27" y="24" width="1.02" height="1.02"/>
+<rect class="qm" x="23" y="28" width="1.02" height="1.02"/>
 <rect class="qm" x="28" y="23" width="1.02" height="1.02"/>
-<rect class="qm" x="26" y="26" width="1.02" height="1.02"/>
-<rect class="qm" x="25" y="27" width="1.02" height="1.02"/>
-<rect class="qm" x="24" y="28" width="1.02" height="1.02"/>
-<rect class="qm" x="28" y="25" width="1.02" height="1.02"/>
+<rect class="qm" x="28" y="24" width="1.02" height="1.02"/>
 <rect class="qm" x="27" y="27" width="1.02" height="1.02"/>
 <rect class="qm" x="28" y="26" width="1.02" height="1.02"/>
 <rect class="qm" x="27" y="28" width="1.02" height="1.02"/>
+<rect class="qm" x="28" y="28" width="1.02" height="1.02"/>
 </svg></div>
         <div id="s6-scan-line"></div>
       </div>
-      <div id="s6-cardlink"><span class="link-pill"><span>linktrees.link/<span class="slug">chikenhut</span></span></span></div>
+      <div id="s6-cardlink"><span class="link-pill"><span>linktrees.link/<span class="slug">sukkar-hel</span></span></span></div>
     </div>
 
     <h1 id="s6-h" class="s6-head headline on-dark clip" data-start="0.3" data-duration="3.0" data-track-index="2">

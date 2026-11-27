@@ -65,29 +65,29 @@
         <div class="screen">
           <div id="s5-load"></div>
           <div class="page-zoom">
-            <div id="s5-page" class="lp t-chikenhut">
+            <div id="s5-page" class="lp t-cafe">
               <div class="stripes"></div>
               <div id="s5-content">
                 <div class="s5-covers">
-                  <div id="s5-cv1" class="cover fade" style="background-image:url('assets/clients/chikenhut-cover.png')"></div>
+                  <div id="s5-cv1" class="cover fade" style="background-image:url('assets/brand-cafe/cover.svg')"></div>
                   <div id="s5-cv2" class="cover" style="background-image:url('assets/clients/devmmnd-cover.png')"></div>
                   <div id="s5-cv3" class="cover" style="background-image:url('assets/clients/courseing-cover.png')"></div>
                 </div>
                 <div class="s5-av">
-                  <div id="s5-av1" style="background-image:url('assets/clients/chikenhut-logo.jpg')"></div>
+                  <div id="s5-av1" style="background-image:url('assets/brand-cafe/logo.svg')"></div>
                   <div id="s5-av2" style="background-image:url('assets/clients/devmmnd-logo.png')"></div>
                   <div id="s5-av3" style="background-image:url('assets/clients/courseing-logo.png')"></div>
                 </div>
                 <div class="s5-stack name ltrname">
-                  <span id="s5-n1">Chiken Hut</span><span id="s5-n2">Devmmnd Solutions</span><span id="s5-n3">Courseing Company</span>
+                  <span id="s5-n1" dir="rtl">سكّر وهيل</span><span id="s5-n2">Devmmnd Solutions</span><span id="s5-n3">Courseing Company</span>
                 </div>
                 <div class="s5-stack" style="margin-top:8px">
-                  <span id="s5-t1" class="tagline" style="margin:0"><i class="ico i-tag"></i>مطعم وجبات سريعة</span>
+                  <span id="s5-t1" class="tagline" style="margin:0"><i class="ico i-tag"></i>قهوة وحلويات</span>
                   <span id="s5-t2" class="tagline" style="margin:0;direction:ltr"><i class="ico i-building"></i>Software Company</span>
                   <span id="s5-t3" class="tagline" style="margin:0;direction:ltr"><i class="ico i-building"></i>Technology and Education</span>
                 </div>
                 <div class="btns">
-                  <div class="btn primary"><div class="t"><i class="ico i-phone"></i>اتصال</div><div class="s ltr">0993354919</div></div>
+                  <div class="btn primary"><div class="t"><i class="ico i-phone"></i>اتصال</div><div class="s ltr">0900 000 000</div></div>
                   <div class="btn"><div class="t"><i class="ico i-user-plus"></i>حفظ</div><div class="s">جهة الاتصال</div></div>
                 </div>
                 <div id="s5-socials" class="socials">
@@ -99,7 +99,7 @@
                 <div class="card">
                   <div class="addr">
                     <div class="pin"><i class="ico i-location-dot"></i></div>
-                    <div><div class="k">العنوان</div><div class="v">حلب-الجميلية-جانب جامع الصديق</div></div>
+                    <div><div class="k">العنوان</div><div class="v">حلب</div></div>
                   </div>
                   <div class="mapbtn"><i class="ico i-open"></i>فتح في الخرائط</div>
                 </div>
@@ -152,7 +152,7 @@
     <div id="s5-pen"><i class="ico i-pen"></i></div>
     <div id="s5-signal"><span class="s5-bars"><i class="on" style="height:12px"></i><i style="height:20px"></i><i style="height:30px"></i><i style="height:40px"></i></span>نت ضعيف</div>
     <div id="s5-fast"><i class="ico i-circle-check"></i>فتحت فوراً</div>
-    <div id="s5-link"><div id="s5-pill" class="link-pill"><i class="ico i-lock"></i><span>linktrees.link/<span class="slug">chikenhut</span></span></div><br /><span id="s5-same">نفس الرابط</span></div>
+    <div id="s5-link"><div id="s5-pill" class="link-pill"><i class="ico i-lock"></i><span>linktrees.link/<span class="slug">sukkar-hel</span></span></div><br /><span id="s5-same">نفس الرابط</span></div>
     <div id="s5-flood"></div>
   </div>
 
@@ -174,11 +174,11 @@
 
       wordsIn("#s5-h1 .w", 0.25);
 
-      // live re-skin: Chiken Hut → Devmmnd → Courseing → back to Chiken Hut
+      // live re-skin: سكّر وهيل → Devmmnd → Courseing → back to سكّر وهيل
       const themes = {
         dev: { "--cream": "#eef2f9", "--sand": "#dbeafe", "--line": "#c7d2fe", "--ink": "#1e293b", "--muted2": "#64748b", "--brand": "#1e40af", "--brand-dark": "#172554" },
         crs: { "--cream": "#eef5ff", "--sand": "#dbeafe", "--line": "#bfdbfe", "--ink": "#1e293b", "--muted2": "#64748b", "--brand": "#0056d2", "--brand-dark": "#0044a8" },
-        ch:  { "--cream": "#fdf2f2", "--sand": "#fee2e2", "--line": "#fecaca", "--ink": "#450a0a", "--muted2": "#991b1b", "--brand": "#dc2626", "--brand-dark": "#b91c1c" },
+        ch:  { "--cream": "#F6EFE6", "--sand": "#E4EBDF", "--line": "#E3D5C5", "--ink": "#3B2A22", "--muted2": "#6B4A3A", "--brand": "#6B4A3A", "--brand-dark": "#4A3228" },
       };
       const swap = (from, to, theme, at) => {
         tl.to("#s5-page", { ...theme, duration: 0.5, ease: "power2.inOut" }, at);

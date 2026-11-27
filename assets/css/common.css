@@ -162,6 +162,8 @@
 
 /* client themes (colour values copied from each live page) */
 .lp.t-chikenhut { --cream: #fdf2f2; --sand: #fee2e2; --line: #fecaca; --ink: #450a0a; --muted2: #991b1b; --brand: #dc2626; --brand-dark: #b91c1c; }
+/* fictional café brand «سكّر وهيل»: cream, coffee brown, cardamom green */
+.lp.t-cafe { --cream: #F6EFE6; --sand: #E4EBDF; --line: #E3D5C5; --ink: #3B2A22; --muted2: #6B4A3A; --brand: #6B4A3A; --brand-dark: #4A3228; }
 .lp.t-devmmnd { --cream: #eef2f9; --sand: #dbeafe; --line: #c7d2fe; --ink: #1e293b; --muted2: #64748b; --brand: #1e40af; --brand-dark: #172554; }
 .lp.t-courseing { --cream: #eef5ff; --sand: #dbeafe; --line: #bfdbfe; --ink: #1e293b; --muted2: #64748b; --brand: #0056d2; --brand-dark: #0044a8; }
 .lp.t-teal { --cream: #f0fdfa; --sand: #ccfbf1; --line: #99f6e4; --ink: #0b1f1c; --muted2: #0f766e; --brand: #0f766e; --brand-dark: #134e4a; }
